@@ -1,0 +1,40 @@
+/* You may insert all settings here eg: SET LINESIZE 120*/
+
+DROP TABLE OrderDetails;
+DROP TABLE Order;
+DROP TABLE Shipment;
+DROP TABLE Item;
+DROP TABLE Customer;
+.....
+
+
+CREATE TABLE Customer(.....);
+CREATE TABLE Item(.....);
+CREATE TABLE Shipment(.....);
+CREATE TABLE Order(.....);
+CREATE TABLE OrderDetails(.....);
+.....
+
+INSERT INTO Customer VALUES(.....);
+INSERT INTO Item VALUES(.....);
+INSERT INTO Shipment VALUES(.....);
+INSERT INTO Order VALUES(.....);
+INSERT INTO OrderDetails VALUES(.....);
+.....
+
+
+COMMIT; 
+
+
+SELECT COUNT(*) AS NoOfCustomer
+FROM Customer;
+SELECT COUNT(*) AS NoOfItem
+FROM Item;
+SELECT COUNT(*) AS NoOfShipment
+FROM Shipment;
+SELECT COUNT(*) AS NoOfOrder
+FROM Order;
+SELECT COUNT(*) AS NoOfOrderDetails
+FROM OrderDetails;
+.....
+

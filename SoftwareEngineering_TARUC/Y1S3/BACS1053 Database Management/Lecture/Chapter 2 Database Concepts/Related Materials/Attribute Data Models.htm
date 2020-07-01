@@ -1,0 +1,638 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style="height: 100%;" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Attribute Data Models</title>
+
+<meta name="description" content="Find out information on GIS attribute data model with examples that presents map features and characteristics.">
+
+<meta name="keywords" content="Attribute Data Models">
+
+<script src="Attribute%20Data%20Models_files/ga.js" async="" type="text/javascript"></script><script src="Attribute%20Data%20Models_files/gpt.js" type="text/javascript" async=""></script><script language="JavaScript" src="Attribute%20Data%20Models_files/style.js" type="text/Javascript"></script>
+<style type="text/css" media="screen">
+@import 'http://www.mapsofindia.com/style_2009/style-new.css';
+</style>
+<script type="text/javascript">
+var googletag = googletag || {};
+googletag.cmd = googletag.cmd || [];
+(function() {
+var gads = document.createElement('script');
+gads.async = true;
+gads.type = 'text/javascript';
+var useSSL = 'https:' == document.location.protocol;
+gads.src = (useSSL ? 'https:' : 'http:') + 
+'//www.googletagservices.com/tag/js/gpt.js';
+var node = document.getElementsByTagName('script')[0];
+node.parentNode.insertBefore(gads, node);
+})();
+</script>
+
+<script type="text/javascript">
+googletag.cmd.push(function() {
+googletag.defineSlot('/5535731/MOI_Common_BoxAD', [336, 280], 'div-gpt-ad-1378116060310-0').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI_Common_Skyscrper', [160, 600], 'div-gpt-ad-1378116060310-1').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI_Common_TopAd', [728, 90], 'div-gpt-ad-1378116060310-2').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI_new_below_h1_ad_728*90', [728, 90], 'div-gpt-ad-1378116060310-3').addService(googletag.pubads());
+googletag.defineSlot('/5535731/Netgain_on_MOI_and_subdomain', [468, 60], 'div-gpt-ad-1386843825116-0').addService(googletag.pubads());
+
+googletag.defineSlot('/5535731/headeradd728x90', [728, 90], 'div-gpt-ad-1385033790590-0').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI-728x90-bottom', [728, 90], 'div-gpt-ad-1385033790590-1').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI-Skyscrapper-1', [160, 600], 'div-gpt-ad-1385033790590-2').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI-Skyscrapper-2', [160, 600], 'div-gpt-ad-1385033790590-3').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI-TF-box-300x250', [300, 250], 'div-gpt-ad-1385033790590-4').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI-TF-box-300x250-2', [300, 250], 'div-gpt-ad-1385033790590-5').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI-TF-skyscrapper-1', [160, 600], 'div-gpt-ad-1385033790590-6').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI-TF-skyscrapper-2', [160, 600], 'div-gpt-ad-1385033790590-7').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI-TF-skyscrapper-3', [160, 600], 'div-gpt-ad-1385033790590-8').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI-TF-skyscrapper-4', [160, 600], 'div-gpt-ad-1385033790590-9').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI-TF-skyscrapper-5', [160, 600], 'div-gpt-ad-1385033790590-10').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI_tribal_160*600_whole_website', [160, 600], 'div-gpt-ad-1385033790590-15').addService(googletag.pubads());
+googletag.defineSlot('/5535731/MOI_Tribal_300*250_whole_website', [300, 250], 'div-gpt-ad-1385033790590-16').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.enableServices();
+});
+</script>
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-22494977-1']);
+_gaq.push(['_setDomainName', 'none']);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+<link href="Attribute%20Data%20Models_files/translateelement.css" charset="UTF-8" rel="stylesheet" type="text/css"><script src="Attribute%20Data%20Models_files/main.js" charset="UTF-8" type="text/javascript"></script><script src="Attribute%20Data%20Models_files/element_main.js" charset="UTF-8" type="text/javascript"></script></head>
+<body style="position: relative; min-height: 100%; top: 0px;">
+<div class="main">
+<div class="header_container">
+<div class="logo" title="Maps of India">
+<a href="http://www.mapsofindia.com/india/india.html" id="link1"></a>
+<a href="http://www.mapsofindia.com/maps/india/india-political-map.htm" id="link2"></a>
+<a href="http://www.mapsofindia.com/india.html" id="link3"></a>
+<a href="http://www.mapsofindia.com/" id="link4"></a>
+</div>
+<!-- headeradd728x90 -->
+<div id="div-gpt-ad-1385033790590-0" class="houseads">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1385033790590-0'); });
+</script>
+</div>
+</div>
+</div>
+<div class="main">
+<script language="JavaScript" type="text/javascript">
+<!--
+tab_link();
+//-->
+</script><!-- Tab navigation starts here --><div class="tab_nav"><div class="tab_left"></div><div class="tab_right"></div><div class="tab_links"><ul><li><a href="http://www.mapsofindia.com/" title="Home"><img src="Attribute%20Data%20Models_files/home-icon.png" alt="Home" border="0" height="22" width="23"></a></li><li><img src="Attribute%20Data%20Models_files/navigation-partition.gif" alt="" height="34" width="2"></li><li><a href="http://www.mapsofindia.com/tourism/" title="India Travel">India Travel</a></li><li><img src="Attribute%20Data%20Models_files/navigation-partition.gif" alt="" height="34" width="2"></li><li><a href="http://business.mapsofindia.com/" title="India Business">Business</a></li><li><img src="Attribute%20Data%20Models_files/navigation-partition.gif" alt="" height="34" width="2"></li><li><a href="http://www.mapsofindia.com/utilities/" title="Utilities">Utilities</a></li>    <li><img src="Attribute%20Data%20Models_files/navigation-partition.gif" alt="" height="34" width="2"></li><li><a href="http://newsletter.mapsofindia.com/?p=subscribe" title="Newsletter">Newsletter</a></li> <li><img src="Attribute%20Data%20Models_files/navigation-partition.gif" alt="" height="34" width="2"></li><li><a href="http://www.mapsofindia.com/ikaailand/" title="Map Game">Map Game</a></li><li><img src="Attribute%20Data%20Models_files/navigation-partition.gif" alt="" height="34" width="2"></li><li><a href="http://www.mapsofindia.com/education/" title="Education">Education</a></li><li><img src="Attribute%20Data%20Models_files/navigation-partition.gif" alt="" height="34" width="2"></li></ul></div><div class="search_container"><table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td style="padding-top:8px;" valign="top" width="25%"><font color="white" size="2">Search:</font></td><td align="center" valign="middle"><script language="JavaScript" type="text/Javascript">myList();</script><table align="center"><tbody><tr><td valign="top"><form action="http://www.mapsofindia.com/searchresult-page.html" id="cse-search-box"><input name="cx" value="partner-pub-8993220319430392:59jmgvbhm8y" type="hidden"><input name="cof" value="FORID:10" type="hidden"><input name="ie" value="ISO-8859-1" type="hidden"><table border="0"><tbody><tr><td valign="top"><input name="q" size="30" style="border: 1px solid rgb(126, 157, 185); padding: 2px; background: url(&quot;http://www.google.com/cse/intl/en/images/google_custom_search_watermark.gif&quot;) no-repeat scroll left center rgb(255, 255, 255);" id="query-input"></td><td><input name="sa" value="Search" class="search" type="submit"></td></tr></tbody></table><input value="www.mapsofindia.com/gis/attribute-data.html" name="siteurl" type="hidden"><input value="www.google.com.my/imgres?imgurl=http%3A%2F%2Fwww.mapsofindia.com%2Fimages%2Fnetwork-model.jpg&amp;imgrefurl=http%3A%2F%2Fwww.mapsofindia.com%2Fgis%2Fattribute-data.html&amp;h=193&amp;w=597&amp;tbnid=hyphJiQbggtBHM%3A&amp;zoom=1&amp;docid=DNAWLOoh2gor1M&amp;ei=ZMJrU6XQHoGNuASB5oEg&amp;tbm=isch&amp;client=firefox-a&amp;ved=0CHcQMygQMBA&amp;iact=rc&amp;uact=3&amp;dur=624&amp;page=2&amp;start=10&amp;ndsp=20&amp;biw=1409&amp;bih=624" name="ref" type="hidden"><input name="ss" type="hidden"><input value="www.mapsofindia.com/gis/attribute-data.html" name="siteurl" type="hidden"><input value="www.google.com.my/imgres?imgurl=http%3A%2F%2Fwww.mapsofindia.com%2Fimages%2Fnetwork-model.jpg&amp;imgrefurl=http%3A%2F%2Fwww.mapsofindia.com%2Fgis%2Fattribute-data.html&amp;h=193&amp;w=597&amp;tbnid=hyphJiQbggtBHM%3A&amp;zoom=1&amp;docid=DNAWLOoh2gor1M&amp;ei=ZMJrU6XQHoGNuASB5oEg&amp;tbm=isch&amp;client=firefox-a&amp;ved=0CHcQMygQMBA&amp;iact=rc&amp;uact=3&amp;dur=624&amp;page=2&amp;start=10&amp;ndsp=20&amp;biw=1409&amp;bih=624" name="ref" type="hidden"><input name="ss" type="hidden"></form> <script type="text/javascript" src="Attribute%20Data%20Models_files/brand"></script></td></tr></tbody></table></td></tr></tbody></table></div></div><!-- Tab navigation Ends here -->
+</div>
+<div class="main">
+<div class="navigation"> <a href="http://www.mapsofindia.com/" title="Home">Home</a> » <a href="http://www.mapsofindia.com/gis" title="GIS"> GIS</a> » Attribute Data Models</div>
+<div class="google_search">
+<table cellpadding="5">
+<tbody><tr>
+<td>
+<script language="JavaScript" type="text/javascript">
+<!--
+google_search();
+//-->
+</script><table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td><span class="item8" style="position:relative;"><div id="google_translate_element" style="height:18px; float:left;"><div style="" dir="ltr" class="skiptranslate goog-te-gadget"><div class="goog-te-gadget-simple" style="white-space: nowrap;" id=":0.targetLanguage"><img style="background-image: url(&quot;https://translate.googleapis.com/translate_static/img/te_ctrl3.gif&quot;); background-position: -65px 0px;" class="goog-te-gadget-icon" src="Attribute%20Data%20Models_files/cleardot.gif"><span style="vertical-align: middle;"><a href="javascript:void(0)" class="goog-te-menu-value"><span>Select Language</span><img src="Attribute%20Data%20Models_files/cleardot.gif" height="1" width="1"><span style="border-left: 1px solid rgb(187, 187, 187);">​</span><img src="Attribute%20Data%20Models_files/cleardot.gif" height="1" width="1"><span style="color: rgb(155, 155, 155);">▼</span></a></span></div></div></div><script type="text/javascript">function googleTranslateElementInit() {  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages:'ar,bn,de,el,en,es,fa,fr,gu,hi,id,it,ja,kn,ko,la,pt,ru,ta,te,th,ur,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-22494977-1'}, 'google_translate_element');}</script><script type="text/javascript" src="Attribute%20Data%20Models_files/element.js"></script></span></td><td align="top"><form name="myform" id="myform" style="margin-top:0px;margin-bottom:0px;" action=""><select name="dir" style="font-family:verdana;font-size:11px;color:navy; width:169px;"><option selected="selected" value="">Select City,State or U.T.</option><option value="http://www.mapsofindia.com/agra/">Agra</option><option value="http://www.mapsofindia.com/ahmedabad/">Ahmedabad</option><option value="http://www.mapsofindia.com/maps/uttarpradesh/districts/allahabad.htm">Allahabad</option><option value="http://www.mapsofindia.com/amritsar/">Amritsar</option><option value="http://www.mapsofindia.com/arunachal-pradesh/">Arunachal Pradesh</option><option value="http://www.mapsofindia.com/assam/">Assam</option><option value="http://www.mapsofindia.com/aurangabad/">Aurangabad</option><option value="http://www.mapsofindia.com/bangalore/">Bangalore</option><option value="http://www.mapsofindia.com/bhopal/">Bhopal</option><option value="http://www.mapsofindia.com/bihar/">Bihar</option><option value="http://www.mapsofindia.com/maps/rajasthan/bikaner.htm">Bikaner</option><option value="http://www.mapsofindia.com/chandigarh/">Chandigarh</option><option value="http://www.mapsofindia.com/chennai/">Chennai</option><option value="http://www.mapsofindia.com/chhattisgarh/">Chhattisgarh</option><option value="http://www.mapsofindia.com/kochi/">Cochin</option><option value="http://www.mapsofindia.com/coimbatore/">Coimbatore</option><option value="http://www.mapsofindia.com/hill-stations-india/darjeeling.html">Darjiling</option><option value="http://www.mapsofindia.com/dehradun/">Dehradun</option><option value="http://www.mapsofindia.com/delhi/">Delhi</option><option value="http://www.mapsofindia.com/faridabad/">Faridabad</option><option value="http://www.mapsofindia.com/ghaziabad/">Ghaziabad</option><option value="http://www.mapsofindia.com/maps/goa/">Goa</option><option value="http://www.mapsofindia.com/maps/gujarat/">Gujarat</option><option value="http://www.mapsofindia.com/gurgaon/">Gurgaon</option><option value="http://www.mapsofindia.com/guwahati/">Guwahati</option><option value="http://www.mapsofindia.com/gwalior/">Gwalior</option><option value="http://www.mapsofindia.com/haryana/">Haryana</option><option value="http://www.mapsofindia.com/himachal-pradesh/">Himanchal Pradesh</option><option value="http://www.mapsofindia.com/hyderabad/">Hyderabad</option><option value="http://www.mapsofindia.com/indore/">Indore</option><option value="http://www.mapsofindia.com/maps/madhyapradesh/jabalpur-map.htm">Jabalpur</option><option value="http://www.mapsofindia.com/jaipur/">Jaipur</option><option value="http://www.mapsofindia.com/jaisalmer/">Jaisalmer</option><option value="http://www.mapsofindia.com/maps/jammuandkashmir/">Jammu and Kashmir</option><option value="http://www.mapsofindia.com/maps/uttarpradesh/districts/jhansi.htm">Jhansi</option><option value="http://www.mapsofindia.com/jharkhand/">Jharkhand</option><option value="http://www.mapsofindia.com/jodhpur/">Jodhpur</option><option value="http://www.mapsofindia.com/kanpur/">Kanpur</option><option value="http://www.mapsofindia.com/karnataka/">Karnataka</option><option value="http://www.mapsofindia.com/maps/kerala/">Kerala</option><option value="http://www.mapsofindia.com/kodaikanal/">Kodaikanal</option><option value="http://www.mapsofindia.com/kolkata/">Kolkata</option><option value="http://www.mapsofindia.com/kota/">Kota</option><option value="http://www.mapsofindia.com/kottayam/">Kottayam</option><option value="http://www.mapsofindia.com/maps/jammuandkashmir/leh-ladakh-map.html">Ladakh</option><option value="http://www.mapsofindia.com/lakshadweep/">Lakshadweep</option><option value="http://www.mapsofindia.com/lucknow/">Lucknow</option><option value="http://www.mapsofindia.com/ludhiana/">Ludhiana</option><option value="http://www.mapsofindia.com/maps/maharashtra/">Maharashtra</option><option value="http://www.mapsofindia.com/manali/">Manali</option><option value="http://www.mapsofindia.com/mangalore/">Mangalore</option><option value="http://www.mapsofindia.com/maps/manipur/">Manipur</option><option value="http://www.mapsofindia.com/mathura/">Mathura</option><option value="http://www.mapsofindia.com/maps/meghalaya/">Meghalaya</option><option value="http://www.mapsofindia.com/maps/mizoram/">Mizoram</option><option value="http://www.mapsofindia.com/maps/uttarpradesh/districts/moradabad.htm">Moradabad</option><option value="http://www.mapsofindia.com/mountabu/">Mount Abu</option><option value="http://www.mapsofindia.com/maps/mumbai/">Mumbai</option><option value="http://www.mapsofindia.com/mysore/">Mysore</option><option value="http://www.mapsofindia.com/maps/nagaland/">Nagaland</option><option value="http://www.mapsofindia.com/nagpur/">Nagpur</option><option value="http://www.mapsofindia.com/nainital/">Nainital</option><option value="http://www.mapsofindia.com/noida/">Noida</option><option value="http://www.mapsofindia.com/ooty/">Ooty</option><option value="http://www.mapsofindia.com/orissa/">Orissa</option><option value="http://www.mapsofindia.com/patna/">Patna</option><option value="http://www.mapsofindia.com/maps/pondicherry/">Pondicherry</option><option value="http://www.mapsofindia.com/portblair/">Port Blair</option><option value="http://www.mapsofindia.com/pune/">Pune</option><option value="http://www.mapsofindia.com/maps/punjab/">Punjab</option><option value="http://www.mapsofindia.com/maps/rajasthan/">Rajasthan</option><option value="http://www.mapsofindia.com/rajkot/">Rajkot</option><option value="http://www.mapsofindia.com/rishikesh/">Rishikesh</option><option value="http://www.mapsofindia.com/maps/uttarpradesh/districts/saharanpur.htm">Saharanpur</option><option value="http://www.mapsofindia.com/maps/andhrapradesh/secunderabad.htm">Secunderabad</option><option value="http://www.mapsofindia.com/maps/sikkim/">Sikkim</option><option value="http://www.mapsofindia.com/surat/">Surat</option><option value="http://www.mapsofindia.com/tamilnadu/">Tamilnadu</option><option value="http://www.mapsofindia.com/maps/tamilnadu/tiruchchirapalli.htm">Trichy</option><option value="http://www.mapsofindia.com/maps/kerala/thiruvananthapuram.htm">Trivandrum</option><option value="http://www.mapsofindia.com/udaipur/">Udaipur</option><option value="http://www.mapsofindia.com/uttar-pradesh/index.html">Uttar Pradesh</option><option value="http://www.mapsofindia.com/uttarakhand/">Uttranchal</option><option value="http://www.mapsofindia.com/maps/gujarat/vadodra.htm">Vadodara</option><option value="http://www.mapsofindia.com/varanasi/">Varanasi</option><option value="http://www.mapsofindia.com/west-bengal/">West Bengal</option></select>&nbsp;<input name="submit" value="Go" style="font-family:verdana;font-size:11px;font-weight:bold;color:navy;" onclick="javascript:openUrl();" align="bottom" type="button">&nbsp;</form></td></tr></tbody></table>
+</td>
+<td>
+<!-- AddThis Button BEGIN -->
+<script type="text/javascript">addthis_pub  = 'mapsofindia.com';</script>
+<a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', '[URL]', '[TITLE]')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="Attribute%20Data%20Models_files/button1-bm.gif" alt="" border="0" height="16" width="125"></a><script type="text/javascript" src="Attribute%20Data%20Models_files/addthis_widget.js"></script>
+<!-- AddThis Button END -->
+</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+
+<div class="main">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tbody><tr>
+<td valign="top" width="11"><img src="Attribute%20Data%20Models_files/top-L-curve-base.gif" alt="" height="10" width="11"></td>
+<td class="grey_bg">&nbsp;</td>
+<td valign="top" width="11"><img src="Attribute%20Data%20Models_files/top-R-curve-base.gif" alt="" height="10" width="11"></td>
+</tr>
+</tbody></table>
+</div>
+<div class="main">
+<div class="grey_bg1">
+<!-- 	left panel starts -->
+<div id="left-panel">
+<div style="margin:0px 0 5px 0px;"><script type="text/javascript"><!--
+google_ad_client = 'ca-pub-8993220319430392';
+/* MOI_Flight_LinkUnit */
+google_ad_slot = '8169807453';
+google_ad_width = 160;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript" src="Attribute%20Data%20Models_files/show_ads.js">
+</script></div>
+
+<div class="left_blue_bg">
+<div class="left_blue_curve"></div>
+<div class="nav_head">
+<a href="http://www.mapsofindia.com/general/" title="Maps of India">Maps of India</a>
+</div> 
+<div class="right_blue_curve"></div>
+</div>
+<div class="left_links_container">
+<div class="left_links">
+<ul>
+<li><a href="http://www.mapsofindia.com/maps/india/india-political-map.htm" title="Map of India">Map of India</a></li>
+<li><a href="http://www.mapsofindia.com/maps/india/physical-map.html" title="Physical Map of India">Physical Map of India</a></li>
+<li><a href="http://www.mapsofindia.com/maps/india/outlinemapofindia.htm" title="Outline Map of India">Outline Map of India</a></li>
+</ul>
+<div class="more">
+<a href="http://www.mapsofindia.com/general/" title="More">more...</a>
+</div>
+</div>
+<div class="nav_head1">
+<a href="http://www.mapsofindia.com/reference-maps/" title="India Maps And Views">India Maps And Views </a>
+</div>
+<div class="left_links">
+<ul>
+<li><a href="http://www.mapsofindia.com/geography/" title="India Geography">India Geography</a></li>
+<li><a href="http://www.mapsofindia.com/history/" title="History of India">History of India</a></li>
+<li><a href="http://www.mapsofindia.com/census/" title="India Census Maps">India Census Maps</a></li>
+<li><a href="http://www.mapsofindia.com/economy/" title="Business and Economy">Business and Economy</a></li>
+<li><a href="http://www.mapsofindia.com/culture/" title="India Culture">India Culture</a></li>
+</ul>
+<div class="more">
+<a href="http://www.mapsofindia.com/reference-maps/" title="More">more...</a>
+</div>
+</div>
+<div class="nav_head1">
+<a href="http://www.mapsofindia.com/infrastructure/" title="Transport Network In India">Transport Network In India </a>
+</div>
+<div class="left_links">
+<ul>
+<li><a href="http://www.mapsofindia.com/roads/" title="Road Map of India">Road Map of India</a></li>
+<li><a href="http://www.mapsofindia.com/railways/" title="India Rail Network">India Rail Network</a></li>
+<li><a href="http://www.mapsofindia.com/air-network/" title="Air Network in India">Air Network in India</a></li>
+<li><a href="http://www.mapsofindia.com/water/" title="Ports in India &amp; waterways">Ports in India &amp; waterways</a></li>
+
+</ul>
+<div class="more">
+<a href="http://www.mapsofindia.com/infrastructure/" title="More">more...</a>
+</div>
+</div>
+<div class="nav_head1">
+<a href="http://www.mapsofindia.com/tourism/" title="India Travel">India Travel </a>
+</div>
+<div class="left_links">
+<ul>
+<li><a href="http://www.mapsofindia.com/hotels-india/" title="Hotels in India">Hotels in India</a></li>
+<li><a href="http://www.mapsofindia.com/maps/india/religious-places.htm" title="Temples in India">Temples in India</a></li>
+<li><a href="http://www.mapsofindia.com/maps/india/hill-stations.htm" title="Hill Stations">Hill Stations</a></li>
+</ul>
+<div class="more">
+<a href="http://www.mapsofindia.com/tourism/" title="More">more...</a>
+</div>
+</div>
+<div class="nav_head1">
+<a href="http://www.mapsofindia.com/states/" title="India States &amp; Union Territories">India States &amp; Union Territories</a>
+</div>
+<div class="left_links">
+<ul>
+<li><a href="http://www.mapsofindia.com/stateprofiles/" title="State Profiles">State Profiles</a></li>
+<li><a href="http://www.mapsofindia.com/maps/kerala/" title="Kerala">Kerala</a></li>
+<li><a href="http://www.mapsofindia.com/maps/goa/" title="Goa">Goa</a></li>
+<li><a href="http://www.mapsofindia.com/maps/gujarat/" title="Gujarat">Gujarat</a></li>
+<li><a href="http://www.mapsofindia.com/maps/rajasthan/" title="Rajasthan">	Rajasthan</a></li>
+
+</ul>
+<div class="more">
+<a href="http://www.mapsofindia.com/states/" title="More">more...</a>
+</div>
+</div>
+<div class="nav_head1">
+<a href="http://www.mapsofindia.com/maps/cities/" title="Cities Of India">Cities Of India</a>
+</div>
+<div class="left_links">
+<ul>
+<li><a href="http://www.mapsofindia.com/top-ten-cities-of-india/" title="Top 10 Cities of India">Top 10 Cities of India</a></li>
+<li><a href="http://www.mapsofindia.com/maps/karnataka/bangalore-map.htm" title="Bangalore">Bangalore</a></li>
+<li><a href="http://www.mapsofindia.com/maps/mumbai/" title="Mumbai">Mumbai</a></li>
+<li><a href="http://www.mapsofindia.com/maps/tamilnadu/chennai-map.htm" title="Chennai">Chennai</a></li>
+</ul>
+<div class="more">
+<a href="http://www.mapsofindia.com/india-locations/" title="More">more...</a>
+</div>
+</div>
+<div class="nav_head1">
+<a href="http://www.mapsofindia.com/driving-directions-maps/" title="Driving Direction Maps">Driving Direction Maps </a>
+</div>
+<div class="left_links">
+<ul>
+<li><a href="http://www.mapsofindia.com/maps/india/national-highway.htm" title="National Highways">National Highways</a></li>
+<li><a href="http://www.mapsofindia.com/maps/pocketmaps/" title="Intra City Maps">Intra City Maps</a></li>
+</ul>
+<div class="more">
+<a href="http://www.mapsofindia.com/roads/" title="More">more...</a>
+</div>
+</div>
+<div class="nav_head1">
+<a href="http://www.mapsofindia.com/worldmap/" title="World Map">World Map </a>
+</div>
+<div class="nav_head1">
+<a href="http://www.mapsofindia.com/high-resolution-maps.html" title="Product &amp; Services">Product &amp; Services </a>
+</div>
+<div class="left_links">
+<ul>
+<li><a href="http://www.indiamapstore.com/cd/" title="Maps of India CD">Maps of India CD</a></li>
+<li><a href="http://www.mapsofindia.com/custom-maps/" title="Custom Mapping">Custom Mapping</a></li>
+<li><a href="http://www.mapsofindia.com/location-locator/" title="Location Locator  Solutions">Location Locator  Solutions</a></li>
+</ul>
+<div class="more">
+<a href="http://www.mapsofindia.com/high-resolution-maps.html" title="More">more...</a>
+</div>
+</div>	
+<div class="nav_head1">
+<a href="#" title="Our Channels">Our Channels </a>
+</div>
+<div class="left_links">
+<ul>
+<li><a href="http://automobiles.mapsofindia.com/" title="India Automobiles">India Automobiles</a></li>
+<li><a href="http://www.mapsofindia.com/cricket/" title="India Cricket">India Cricket</a></li>
+<li><a href="http://www.mapsofindia.com/maps/mapinnews/" title="India News">India News</a></li>
+</ul>
+</div>	
+<div class="nav_head1">
+<a href="http://www.mapsofindia.com/indien-karten/" title="Indien Karten">Indien Karten  </a>
+</div>
+<div class="left_links">
+<ul>
+<li><a href="http://www.mapsofindia.com/indien-karten/goa/" title="Karten von Goa">Karten von Goa</a></li>
+<li><a href="http://www.mapsofindia.com/indien-karten/kerala/" title="Landkarten von Kerala">Landkarten von Kerala</a></li>
+<li><a href="http://www.mapsofindia.com/indien-karten/rajasthan/" title="Landkarten von Rajasthan">Landkarten von Rajasthan</a></li>
+</ul>
+<div class="more">
+<a href="http://www.mapsofindia.com/indien-karten/indien/" title="More">more...</a>
+</div>
+</div>	
+<div class="nav_head1">
+<a href="#" title="Our Channels">Affiliate Sites</a>
+</div>
+<div class="left_links">
+<ul>
+<li><a href="http://www.mapstore.in/">Map Store</a></li>
+<li><a href="http://www.mapsofmumbai.com/">Map of Mumbai</a></li> 
+<li><a href="http://www.mapofhyderabad.com/">Map of Hyderabad</a></li>
+<li><a href="http://www.mapsofdelhi.com/">Map of delhi</a></li>
+<li><a href="http://www.mapofbangalore.com/">Map of Bangalore</a></li> 
+<li><a href="http://www.mapsofchennai.com/">Map of Chennai</a></li>
+<li><a href="http://www.focusdelhi.com/">Focus on Delhi Information</a></li>
+</ul>
+</div>	
+<div class="nav_head1">
+<a href="http://www.mapsofindia.com/maps/delhi/delhi.htm" title="Delhi">Delhi</a>
+</div>
+
+</div>
+
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tbody><tr>
+<td class="left_round_corner" width="10">&nbsp;</td>
+<td class="round_corner_border">&nbsp;</td>
+<td class="right_round_corner" width="10">&nbsp;</td>
+</tr>
+</tbody></table>
+
+<!-- MOI-Skyscrapper-1 -->
+<div id="div-gpt-ad-1385033790590-2" class="houseads">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1385033790590-2'); });
+</script>
+</div>
+
+</div>
+<!-- 	left panel Ends -->		
+<!-- 	Side panel starts -->	
+<div id="content-main">
+<div class="content-panel">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tbody><tr>
+<td valign="top" width="10"><img src="Attribute%20Data%20Models_files/H1-Lbase.gif" alt="" height="30" width="10"></td>
+<td class="header-base"><h1>Attribute Data Models </h1></td>
+<td valign="top" width="10"><img src="Attribute%20Data%20Models_files/H1-R-base.gif" alt="" height="30" width="10"></td>
+</tr>
+</tbody></table>
+</div>
+<div class="content-panel1">
+<div id="div-gpt-ad-1378116060310-3" class="below_h1_new_add">
+<script type="text/javascript">
+googletag.display('div-gpt-ad-1378116060310-3');
+</script>
+</div>
+<div class="content-panel2">
+<div class="text"><br>
+<br>
+In GIS attribute data is described as the characteristic of map feature.
+ Attribute data are stored in tables. Each row of a table represents map
+ feature and each column represents a characteristics. The intersection 
+of a column and row shows the value of particular characteristics for a 
+particular map feature.
+<br><br>
+
+<div id="div-gpt-ad-1378116060310-0">
+<script type="text/javascript">
+googletag.display('div-gpt-ad-1378116060310-0');
+</script>
+</div>
+
+<font color="#2950B9"><h5 style="display:inline;">ATTRIBUTE DATA MODELS</h5></font>
+A separate data model is used in GIS to store and maintain attribute 
+data. These data models may exist internally within the GIS 
+software(DBMS). A variety of different data models exist for this 
+storage and management of attribute data. The most common are:
+<ol style="margin-top:3px;margin-left:45px;margin-bottom:3px;" type="1">
+<li><a href="#tabular">Tabular</a><br><br>
+</li><li><a href="#hierarchical">Hierarchical</a><br><br>
+</li><li><a href="#network">Network</a><br><br>
+</li><li><a href="#relational">Relational</a><br><br>
+</li><li><a href="#object">Object Oriented</a>
+</li></ol><br>
+The tabular model is the manner in which most early GIS software 
+packages stored their attribute data. The next three models are those 
+most commonly implemented in database management system(DBMS). The 
+object oriented is newer but rapidly gaining popularity for some 
+application. A brief review of each model is given below.
+<br><br>
+
+<a name="tabular"></a>
+<b>Tabular Model</b>: -The simple tabular model stores attribute data as
+ sequential data files with fixed formats. This type of data model is 
+outdated in GIS arena. It lacks any method of checking data integrity, 
+as well as being inefficient with respect to data storage.
+<br><br>
+<table style="font-family:verdana;font-size:11px;" cellpadding="3" cellspacing="1" align="" border="1" bordercolor="" width="50%">
+<tbody><tr><td><b>CODE</b></td><td><b>STATE</b></td><td><b>DISTRICT</b></td></tr>
+<tr><td>665</td><td>Haryana</td><td>Mewat</td></tr>
+<tr><td>764</td><td>Punjab</td><td>Amritsar</td></tr>
+<tr><td>245</td><td>Punjab</td><td>Kapurthala</td></tr>
+<tr><td>535</td><td>Uttar Pradesh</td><td>Meerut</td></tr>
+<tr><td>355</td><td>Haryana</td><td>Ambala</td></tr>
+</tbody></table>
+<br><br>
+
+<a name="hierarchical"></a>
+
+<b>Hierarchical Model</b>: -The  hierarchical database organizes data in
+ a tree structure. Data is structured downward in a hierarchy of tables.
+ Any level in the hierarchy can have unlimited children, but any child 
+can have only one parent. Hierarchical DBMS have not gained any 
+noticeable acceptance for use within GIS. They are oriented for data 
+sets that are very stable, where primary relationship among the data 
+change frequently or never at all. Also, the limitation on the number of
+ parents that an element may have is not always conducive to actual 
+geographic phenomenon.
+<br>
+<center>
+<img src="Attribute%20Data%20Models_files/hierarchical-model.jpg" alt="Hierarchical Model" border="0" height="173" width="430">
+</center>
+<br><br>
+<a name="network"></a>
+
+<b>Network Model</b>: -The network database organizes data in a network 
+or plex structure. Any column in a plex structure can be linked to any 
+other like a tree structure. a plex structure can be described in terms 
+of parents and children. This model allows having more than one parent.
+Network DBMS have found not much more acceptance in GIS than the 
+hierarchical DBMS. They have the same flexibility limitations as 
+hierarchical database: however, the more powerful structure for 
+representing data relationships allows a more realistic modeling of 
+geographic phenomena. However network database tend to become overlay 
+complex too easily. In this regard it is easy to lose control and 
+understanding of the relationships between elements.
+<br>
+<center>
+<img src="Attribute%20Data%20Models_files/network-model.jpg" alt="Network Model" border="0" height="193" width="597">
+</center>
+<br><br>
+
+<a name="relational"></a>
+
+<b>Relational Model</b>: - The relational database organizes data in 
+tables. Each table is identified by a unique table name, and is 
+organized by rows and columns. Each column within a table also has a 
+unique name. Columns store the values for a specific attribute, e.g. 
+cover group, tree height. Rows represent one record in the table. In GIS
+ each row is usually linked to a separate feature, e.g. a forestry 
+stand. Accordingly, each row would be comprised of several columns, each
+ column containing a specific value for that geographic feature. In this
+ model a key represents one or more attributes whose value can uniquely 
+identify a record in a table. Therefore, a key common to two tables can 
+establish connection between corresponding records in the tables.
+<br><br>
+A relational database usually contains three types 0f relationship 
+between tables.  Usually here two types of table are defined- the source
+ table &amp; the destination table.  If the purpose is to add attribute 
+data from a table to the feature attribute table, then the feature 
+attribute table is the destination table and the other one is the source
+ table. Owing ot this manner, three types of relationships can be 
+created.
+<br><br>
+<u>One-to-one  Relationship</u>- Here one and only one record in the destination table is related to one and only one record in the source table.
+<center><img src="Attribute%20Data%20Models_files/one-to-one.jpg" alt="" border="0" height="144" width="489"></center>
+<br><br>
+<u>One-to-Many Relationship</u>- This means that one record in the destination table may be related to more than one record in the source table.
+<img src="Attribute%20Data%20Models_files/one-to-many.jpg" alt="" border="0" height="127" width="449">
+<br><br>
+<u>Many-to-One Relationship</u>- This type of relationship is just 
+opposite to the  One-to-Many Relationship. Here two or more records in 
+the destination table may be related to one record in the source table.
+<center><img src="Attribute%20Data%20Models_files/many-to-many.jpg" alt="" border="0" height="132" width="451"></center>
+<br><br>
+
+<a name="object"></a>
+<b>Object Oriented Model</b>: - The object oriented data model manages 
+data through object. An object is a collection of data elements and 
+operations that together are considered as single entity. The object 
+oriented database is a relatively new model. This approach has the 
+attraction that querying is very natural, as features can be bundled 
+together with attributes at the database. Today, only a few GIS packages
+ are promoting the use of this attribute data model. However, initial 
+impressions indicate that this approach may hold many operational 
+benefits with respect to geographic data processing.
+
+
+</div>
+<br><br>
+
+<table width="100%">
+<tbody><tr><td colspan="3" bgcolor="03A3F9" height="20"> 
+<center><font color="FFFBF8" face="arial" size="2px"><b>We look forward to your queries and feedback regarding our prodcts and services. You may submit them here.</b></font></center>
+</td></tr>
+</tbody></table>
+
+<table align="center">
+ 
+     
+   
+<tbody><tr>
+<td colspan="5" style="padding-top:10px">
+      <table style="border:1px solid navy;" cellpadding="3" cellspacing="0" align="center" border="0" width="407">
+        <form method="POST" action="http://www.mapsofindia.com/greet.php" onsubmit="return checkSYPForm(this);"></form>
+ <input name="seenform" value="y" type="hidden">
+<input name="service" value="High Resolution Maps" type="hidden">
+<!-- <input type="hidden" name="pageurl" value="$referpage"> -->  
+  <tbody><tr> 
+            <td colspan="2" class="bluetext" align="center" bgcolor="#ffffff"><b> </b></td>
+          </tr>
+          <tr> 
+            <td class="simpletext" style="padding-left:10px" width="137">Name:</td>
+            <td width="258"> 
+              <input name="txiName" class="TextBox" type="text">
+            </td>
+          </tr>
+          <tr> 
+            <td class="simpletext" style="padding-left:10px" width="137">Email:</td>
+            <td width="258"> 
+              <input name="txiEmail" class="TextBox" type="text">
+            </td>
+          </tr>
+  <tr> 
+            <td class="simpletext" style="padding-left:10px" width="137">Telephone 
+              no: </td>
+            <td width="258"> 
+              <input name="txiphone" class="TextBox" type="text">
+            </td>
+          </tr>
+  <tr> 
+            <td class="simpletext" style="padding-left:10px" width="137">Company Name:</td>
+            <td width="258"> 
+              <input name="txicompname" class="TextBox" type="text">
+            </td>
+          </tr>
+  <tr> 
+            <td class="simpletext" style="padding-left:10px" width="137">Designation:</td>
+            <td width="258"> 
+              <input name="txidesignation" class="TextBox" type="text">
+            </td>
+          </tr>
+<tr> 
+                              
+            <td class="simpletext" style="padding-left:10px" width="137">Country:</td>
+                              
+            <td width="258"> 
+<a name="#querylink"></a>
+              <select name="txicountry" class="input1">
+                                 <option value="">Please Select Country</option>
+<option value="Afghanistan">Afghanistan</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="American  Samoa">American  Samoa</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Anguilla">Anguilla</option><option value="Antarctica">Antarctica</option><option value="Antigua and Barbuda">Antigua and Barbuda</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bermuda">Bermuda</option><option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="Bosnia  and Herzegovina">Bosnia  and Herzegovina</option><option value="Botswana">Botswana</option><option value="Brazil">Brazil</option><option value="British Indian Ocean  Territory">British Indian Ocean  Territory</option><option value="British Virgin  Islands">British Virgin  Islands</option><option value="Brunei">Brunei</option><option value="Bulgaria">Bulgaria</option><option value="Burkina  Faso">Burkina  Faso</option><option value="Burundi">Burundi</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option><option value="Cape Verde">Cape Verde</option><option value="Cayman Islands">Cayman Islands</option><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="Christmas  Island">Christmas  Island</option><option value="Cocos Islands">Cocos Islands</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo">Congo</option><option value="Cook Islands">Cook Islands</option><option value="Costa Rica">Costa Rica</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="East Timor">East Timor</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Ethiopia">Ethiopia</option><option value="Falkland  Islands">Falkland  Islands</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="French  Guiana">French  Guiana</option><option value="French Polynesia">French Polynesia</option><option value="French Southern Territories">French Southern Territories</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greece">Greece</option><option value="Greenland">Greenland</option><option value="Grenada">Grenada</option><option value="Guadeloupe">Guadeloupe</option><option value="Guam">Guam</option><option value="Guatemala">Guatemala</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Heard and McDonald Islands">Heard and McDonald Islands</option><option value="Honduras">Honduras</option><option value="Hong Kong">Hong Kong</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India" selected="selected">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Ivory Coast">Ivory Coast</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="Korea, North">Korea, North</option><option value="Korea, South">Korea, South</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Laos">Laos</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macau">Macau</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Marshall Islands">Marshall Islands</option><option value="Martinique">Martinique</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mayotte">Mayotte</option><option value="Mexico">Mexico</option><option value="Micronesia, Federated States of,">Micronesia, Federated States of,</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montserrat">Montserrat</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar">Myanmar</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="Netherlands Antilles">Netherlands Antilles</option><option value="New Caledonia">New Caledonia</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Niue">Niue</option><option value="Norfolk Island">Norfolk Island</option><option value="Northern Mariana Islands">Northern Mariana Islands</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Pitcairn Island">Pitcairn Island</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Puerto Rico">Puerto Rico</option><option value="Qatar">Qatar</option><option value="Reunion">Reunion</option><option value="Romania">Romania</option><option value="Russia">Russia</option><option value="Rwanda">Rwanda</option><option value="S. Georgia and S. Sandwich Isls">S. Georgia and S. Sandwich Isls</option><option value="Saint Kitts &amp; Nevis">Saint Kitts &amp; Nevis</option><option value="Saint Lucia">Saint Lucia</option><option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="Sao Tome and Principe">Sao Tome and Principe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Seychelles">Seychelles</option><option value="Seychelles">Seychelles</option><option value="Singapore">Singapore</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="St. Helena">St. Helena</option><option value="St. Pierre and Miquelon">St. Pierre and Miquelon</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Svalbard and Jan Mayen Islands">Svalbard and Jan Mayen Islands</option><option value="Swaziland">Swaziland</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syria">Syria</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Togo">Togo</option><option value="Tokelau">Tokelau</option><option value="Tonga">Tonga</option><option value="Trinidad and Tobago">Trinidad and Tobago</option><option value="Tunisia">Tunisia</option><option value="Turkey">Turkey</option><option value="Turkmenistan">Turkmenistan</option><option value="Turks and Caicos Islands">Turks and Caicos Islands</option><option value="Tuvalu">Tuvalu</option><option value="U.S. Minor Outlying Islands">U.S. Minor Outlying Islands</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><option value="United States of America">United States of America</option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Vatican City">Vatican City</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option><option value="Virgin Islands">Virgin Islands</option><option value="Wallis and Futuna Islands">Wallis and Futuna Islands</option><option value="Western Sahara">Western Sahara</option><option value="Yemen">Yemen</option><option value="Yugoslavia (Former)">Yugoslavia (Former)</option><option value="Zaire">Zaire</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option> 
+                </select>
+              </td>
+            </tr>
+<tr> 
+            <td class="simpletext" style="padding-left:10px" width="137">Remarks:</td>
+            <td style="padding-right:10px" width="258"> 
+              <textarea name="txicomments" rows="6" cols="40" wrap="virtual"></textarea>
+            </td>
+          </tr>
+          <tr> 
+            <td width="137"></td>
+            <td width="258"> 
+              <input value="Submit" class="TextBox" type="SUBMIT">
+              &nbsp;&nbsp;&nbsp; 
+              <input class="TextBox" type="reset">
+            </td>
+          </tr>
+        
+</tbody></table>
+</td>
+</tr></tbody></table>
+
+
+
+<br><br>
+<span class="content_heading">Last Updated on 28 September 2012</span><br><br>
+
+<div class="ads_div">
+<script language="JavaScript" type="text/javascript">
+<!--
+headeradd468x60();
+//-->
+</script><iframe src="Attribute%20Data%20Models_files/dgreetings.htm" marginheight="0" marginwidth="0" frameborder="0" height="260" scrolling="no" width="610"> </iframe>
+</div>
+</div>
+<div id="right-panel">
+<script language="JavaScript" type="text/javascript"> 
+<!--
+right_top1();
+//-->
+</script><table cellpadding="0" cellspacing="0"><tbody><tr><td style="font: 14px arial; font-weight: bold; color:#000; padding:0 3px">Follow us on</td><td style="padding: 0 7px"><a href="http://www.facebook.com/pages/mapsofindia/282252519772"><img src="Attribute%20Data%20Models_files/icon_facebook.gif" alt="Follow us on Facebook" style="border:none;" align="absmidddle"></a></td><td><a href="http://twitter.com/mapsofindia"><img src="Attribute%20Data%20Models_files/icon_twitter.gif" alt="Follow us on Twitter" style="border:none;" align="absmidddle"></a> </td></tr></tbody></table>
+<!-- MOI_Common_Skyscrper -->
+<div id="div-gpt-ad-1378116060310-1">
+<script type="text/javascript">
+googletag.display('div-gpt-ad-1378116060310-1');
+</script>
+</div>
+
+<!-- MOI-Skyscrapper-2 -->
+<div id="div-gpt-ad-1385033790590-3" class="houseads">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1385033790590-3'); });
+</script>
+</div>
+
+<!-- MOI-TF-skyscrapper-3 -->
+<div id="div-gpt-ad-1385033790590-8" class="houseads">
+<script type="text/javascript">
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1385033790590-8'); });
+</script>
+</div>
+
+</div>
+
+</div>
+<div class="content-panel">
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tbody><tr>
+<td class="left_round_corner" width="10">&nbsp;</td>
+<td class="round_corner_border">&nbsp;</td>
+<td class="right_round_corner" width="10">&nbsp;</td>
+</tr>
+</tbody></table>
+<br><br>
+</div>
+</div>
+</div>
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tbody><tr>
+<td class="left_round_corner1" width="11">&nbsp;</td>
+<td class="round_corner_border1">&nbsp;</td>
+<td class="right_round_corner1" width="11">&nbsp;</td>
+</tr>
+</tbody></table>
+</div>
+<div class="main">
+<script language="JavaScript" type="text/javascript">
+<!--
+bottom_link();
+//-->
+</script><div class="tab_nav"><div class="tab_left"></div><div class="tab_right"></div> <table cellpadding="0" cellspacing="0" align="center" border="0"><tbody><tr><td style="padding-top:1px;" valign="middle"><form action="http://www.mapsofindia.com/searchresult-page.html" id="cse-search-box"><table align="center"><tbody><tr><td><font color="white" size="2"><b>Could not find what you were looking for?</b></font></td><td><input name="cx" value="partner-pub-8993220319430392:59jmgvbhm8y" type="hidden"><input name="cof" value="FORID:10" type="hidden"><input name="ie" value="ISO-8859-1" type="hidden"><input name="q" size="31" style="padding:2px 0 5px 0px; border:0px;" id="query-input"></td><td><input name="sa" value="Search" class="search" type="submit"></td><td width="100px"></td><td><font color="white" size="2"><b><a href="mailto:operations@mapsofindia.com" class="advertise-link">Advertise with Mapsofindia.com</a></b></font></td></tr></tbody></table></form><script type="text/javascript" src="Attribute%20Data%20Models_files/brand"></script> <div id="branding"></div></td></tr></tbody></table></div><!-- Bottom Links starts here --><div class="bottom-links"><a href="http://www.mapsofindia.com/testimonials.html" rel="nofollow">Testimonials</a> | <a href="http://www.mapsofindia.com/sponsors/index.html" rel="nofollow">Sponsors Directory</a> | <a href="http://www.mapsofindia.com/disclaim.htm" rel="nofollow">Disclaimer</a> | <a href="http://www.mapsofindia.com/faq.html" rel="nofollow">FAQs</a>  | <a href="http://www.mapsofindia.com/affiliatenetwork.htm" rel="nofollow">Our Affiliates</a> | <a href="http://www.mapsofindia.com/forms/suggestamap.htm" rel="nofollow">Suggest a Map</a> | <a href="http://www.mapsofindia.com/become-our-sponsor.html" rel="nofollow">Become Our Sponsor</a> | <a href="http://www.mapsofindia.com/copyright/index.html" rel="nofollow">Copyright &amp; Terms of Use</a> | <a href="http://blog.mapsofindia.com/" rel="nofollow">Maps of India Blog</a> | <a href="http://www.mapsofindia.com/privacy-policy/index.html" rel="nofollow">Privacy Policy</a> | <a href="http://www.mapsofindia.com/aboutus.html" rel="nofollow">About Us</a> | <a href="mailto:operations@mapsofindia.com?cc=solutions@mapsofindia.com" rel="nofollow">Contact Us</a> | <a href="http://www.mapsofindia.com/feedback.html" rel="nofollow">Feedback</a> | <a href="http://www.mapsofindia.com/careers.html">Careers</a> | <a href="http://www.mapsofindia.com/sitemap.htm">Site Map</a> | <a href="http://www.mapsofindia.com/link/" rel="nofollow">Link to Us</a> | <a href="http://www.mapsofindia.com/press-release.html" rel="nofollow">Press Release</a>| <a href="http://www.mapsofindia.com/newsletter/">Get the latest Issue of Weekly Newsletter</a></div><!-- Bottom Links Ends here -->
+</div>
+<!-- Footer -->
+<div class="main">
+<script language="JavaScript" type="text/javascript">
+<!--
+footer();
+//-->
+</script><!-- Slider starts here --><div class="block-ec_ads" id="block-ec_ads-slider_ad" style="display: block; position: relative;"><div style="bottom: 0px;" class="pop_up1_alt" id="slider_alt"><div class="slide_left_alt"></div><div class="slide_mid_alt"></div><div class="slide_alt"><script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="Attribute%20Data%20Models_files/buttons.js"></script><script type="text/javascript">stLight.options({publisher:"056ea25f-a4a0-4308-9c4d-e8271ef2bc0d"});</script><span class="st_email_hcount" displaytext="Emai"></span><span class="st_digg_hcount" displaytext="Digg"></span><span class="st_delicious_hcount" displaytext="Delicious"></span><span class="st_twitter_hcount" displaytext="Tweet"></span><span class="st_facebook_hcount" displaytext="Facebook"></span><span class="st_plusone_hcount"></span><span class="item6"><script src="Attribute%20Data%20Models_files/all.js"></script><fb:like href="https://www.facebook.com/pages/mapsofindia/282252519772" layout="button_count" show_faces="false" width="50" font="arial"></fb:like></span><span class="item5"><a href="https://plus.google.com/115773901953431719189"><img src="Attribute%20Data%20Models_files/g.gif" title="Connect with us in G+" border="0" height="20" width="20"></a></span></div></div><div id="close_sld"><div style="display: block;" id="hide_btn"></div><div style="display: none;" id="up_arrow"></div><div style="display: block;" id="down_arrow"></div></div></div><!-- Slider ends here --><div style="position: absolute;right: 0;top: 250PX;background: url(http://www.mapsofindia.com/advertisement1.png)top left no-repeat;padding: 7px 0 0 0;"><div id="slide" style="width: 127px; height: 445px; background-image: url(http://www.mapsofindia.com/map-download/includes/bts-banner.png); position: relative; top: 0; right: 0px; display: block; z-index: 9999; background-position: initial initial; background-repeat: no-repeat no-repeat;"><div id="hide" style="width: 17px; height: 16px; position: absolute; top: -16px; right: 0px; z-index: 10000; cursor: pointer; background-image: url(http://www.mapsofindia.com/images/cross-button-black.png); background-position: 0% 0%; background-repeat: no-repeat no-repeat;"></div><iframe src="Attribute%20Data%20Models_files/dfp_right_slider_ad.htm" marginwidth="0" marginheight="0" frameborder="0" height="600" scrolling="no" width="120"></iframe></div></div>
+</div>
+<!-- Start Quantcast tag -->
+<script type="text/javascript" src="Attribute%20Data%20Models_files/quant.js"></script>
+<script type="text/javascript">
+_qacct="p-98f87jYQeyLZ6";quantserve();</script>
+<noscript>
+<a href="http://www.quantcast.com/p-98f87jYQeyLZ6" target="_blank"><img src="http://pixel.quantserve.com/pixel/p-98f87jYQeyLZ6.gif" style="display: none" border="0" height="1" width="1" alt="Quantcast" /></a></noscript>
+<!-- End Quantcast tag -->
+<!-- Footer --><div id="goog-gt-tt" class="skiptranslate" dir="ltr"><div style="padding: 8px;"><div><div class="logo"><img src="Attribute%20Data%20Models_files/translate-32.png" height="20" width="20"></div></div></div><div class="top" style="padding: 8px; float: left; width: 100%;"><h1 class="title gray">Original text</h1></div><div class="middle" style="padding: 8px;"><div class="original-text"></div></div><div class="bottom" style="padding: 8px;"><div class="activity-links"><span class="activity-link">Contribute a better translation</span><span class="activity-link"></span></div><div class="started-activity-container"><hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;"><div class="activity-root"></div></div></div><div style="display: none;" class="status-message"></div></div>
+
+<div style="position: absolute; top: -1000px; height: 1px; width: 1px;"><object id="fI0huydbm20" name="fI0huydbm20" type="application/x-shockwave-flash" data="Attribute%20Data%20Models_files/hrs.swf" height="500" width="400"><param name="allowScriptAccess" value="always"></object></div><iframe style="visibility: visible; -moz-box-sizing: content-box; width: 279px; height: 274px; display: none;" class="goog-te-menu-frame skiptranslate" frameborder="0"></iframe></body></html>

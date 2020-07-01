@@ -1,0 +1,591 @@
+#wg_wrap {
+	border:1px solid #60AA38;
+	position:relative;
+	margin:0;
+	background:#EEE;
+	width:300px;
+	height:250px;
+}
+
+.searchbox fieldset,
+#deals_search,
+.searchbox legend { display:none; }
+
+body.activities .searchbox #activities_search,
+body.flights .searchbox #flights_search,
+body.hotels .searchbox #hotels_search,
+body.research .searchbox #research_search,
+body.deals div#deals_search {
+	display:block;
+}
+
+.wg_navigation {
+	display:block;
+	background:#6EC140;
+	height:20px;
+	padding-top:4px;
+}
+
+	.wg_navigation h4 { display:none; }
+
+	.wg_navigation ul {
+		display:block;
+		margin-left:4px;
+	}	
+
+		.wg_navigation ul li { float:left; }	
+	
+			.wg_navigation ul li a {
+				background:#60AA38;
+				color:#FF9;				
+				float:left;
+				display:block;
+				height:20px;
+				line-height:20px;
+				width:53px;
+				text-transform:uppercase;
+				font-weight:bold;
+				font-size:10px;
+				text-align:center;
+				margin-right:1px;
+			}		
+				html>body .wg_navigation ul li a { margin-right:2px; }
+			
+				.wg_navigation ul li a#activities_nav { width:64px; }
+				.wg_navigation ul li a#research_nav { width:69px; }
+				.wg_navigation ul li a#deals_nav { width:43px; }
+			
+			.activities .wg_navigation ul li a#activities_nav,
+			.flights .wg_navigation ul li a#flights_nav,
+			.hotels .wg_navigation ul li a#hotels_nav,
+			.research .wg_navigation ul li a#research_nav,
+			.deals .wg_navigation ul li a#deals_nav {
+				background:#EEE;
+				color:#666;
+			}
+			
+.searchbox li input { font-size:12px; }
+			
+.footer {
+	position:absolute;
+	bottom:0;
+	left:0;
+	height:22px;
+	width:292px;
+	padding:4px;
+	background:#CCC;
+	color:#333;
+	text-align:center;
+	font-weight:bold;
+	font-size:10px;
+	line-height:22px;
+}
+
+/* ACTIVITIES SEARCH */
+
+#activities_search { padding-top:3px; }
+
+#activities_search ol {
+	padding:12px;
+	position:relative;
+}
+
+	#activities_search ol li {
+		position:relative;
+		padding-bottom:10px;
+	}
+	
+	#activities_search ol li:after {
+		content:".";
+		display:block;
+		height:0;
+		clear:both;
+		visibility:hidden;
+	}
+
+		#activities_search ol li { display:inline-block; }
+
+		/* Hide from IE Mac \*/
+		#activities_search ol li { display:block; }
+		/* End hide from IE Mac */	
+	
+	#activities_search ol li label {
+		font-weight:bold;
+		color:#333;
+		font-size:11px;
+	}	
+
+		/* location */
+
+		#activities_search .wg_location {}
+
+				#activities_search .wg_location label {
+					clear:left;
+					display:block;
+					line-height:16px;
+				}
+					
+				#activities_search .wg_location input {
+					width:268px;
+					padding:3px;
+					border:1px solid #666;
+				}
+		
+		/* destinations */		
+		
+		#activities_search .wg_destinations { padding-bottom:0px; }
+		html>body #activities_search .wg_destinations { padding-bottom:7px; }
+
+			#activities_search .wg_destinations label {
+				clear:left;
+				display:block;
+				line-height:13px;
+			}
+
+			#activities_search .wg_destinations ul {}
+			
+				#activities_search .wg_destinations ul li {			
+					display:block;
+					float:left;
+					height:10px;
+					padding:0 2px 2px;
+					width:65px;
+					line-height:1.1;
+				}
+				html>body #activities_search .wg_destinations ul li { height:13px; line-height:1.4; }
+					
+					#activities_search .wg_destinations ul li a {
+						color:#069;
+						font-size:10px;
+						font-weight:bold;
+						text-decoration:none;
+					}	
+		
+		/* submit */
+		
+		#activities_search .wg_search_button	{ padding-top:5px; }		
+		
+		#wg_activities_submit	{
+			width:80px;
+			height:30px;
+			float:right;
+		}
+
+/* FLIGHTS SEARCH */
+
+#flights_search { padding-top:3px; }
+
+#flights_search ol {
+	padding:12px;
+	position:relative;
+}
+
+	#flights_search ol li {
+		position:relative;
+		padding-bottom:5px;
+	}
+	
+	#flights_search ol li:after {
+		content:".";
+		display:block;
+		height:0;
+		clear:both;
+		visibility:hidden;
+	}
+
+		#flights_search ol li { display:inline-block; }
+
+		/* Hide from IE Mac \*/
+		#flights_search ol li { display:block; }
+		/* End hide from IE Mac */	
+	
+	#flights_search ol li label {
+		font-weight:bold;
+		text-transform:capitalize;
+		color:#333;
+		font-size:11px;
+	}	
+
+	/* trip type */
+
+	#flights_search .wg_trip span {
+    font-weight:bold;
+    font-size:12px;
+    color:#333333;
+    text-transform:capitalize;
+	}
+
+		/* location */
+
+		#flights_search .wg_location {}
+
+				#flights_search .wg_location label {
+					float:left;
+					clear:left;
+					display:block;
+					width:40px;
+					line-height:20px;
+				}
+				html>body #flights_search .wg_location label { width:42px; }
+					
+				#flights_search .wg_location input {
+					width:222px;
+					padding:3px;
+					border:1px solid #666;
+				}
+				html>body #flights_search .wg_location input { width:224px;	}
+		
+		/* date */		
+		
+		#flights_search .wg_date {}
+
+			#flights_search .wg_date label {
+				float:left;
+				clear:left;
+				display:block;
+				width:42px;
+				line-height:20px;
+			}
+			
+			#flights_search .wg_date input {			
+				float:left;
+				padding:2px 2px;
+				border:1px solid #666;
+				background:#FFF url(/media/sites/wegobox/images/icon-calendar.gif) no-repeat right center;
+				width:109px;	
+			}
+			
+		/* extra */		
+
+		#flights_search .wg_adult {
+			display:block;
+			width:103px;			
+			position:absolute;
+			top:82px;
+			right:14px;
+		}	
+			html>body #flights_search .wg_adult { top:91px; }
+					
+		#flights_search .wg_children {
+			display:block;			
+			width:103px;
+			position:absolute;
+			top:112px;
+			right:14px;				
+		}
+			html>body #flights_search .wg_children { top:117px; }
+		
+			#flights_search .wg_adult label,
+			#flights_search .wg_children label {
+				float:left;
+				clear:left;
+				display:block;
+				width:52px;
+				line-height:20px;
+			}		
+		
+			#flights_search .wg_adult select,
+			#flights_search .wg_children select {		
+				width:43px
+			}
+		
+		/* submit */
+		
+		#flights_search .wg_search_button	{
+			position:relative;
+/*			bottom:0;
+			position:absolute;
+			right:22px;*/
+		}
+		
+		#wg_flights_submit	{
+			width:80px;
+			height:30px;
+			float:right;
+		}
+		
+	/* HOTELS SEARCH */
+
+	#hotels_search { padding-top:3px; }
+
+	#hotels_search ol {
+		padding:12px;
+		position:relative;
+	}
+
+		#hotels_search ol li {
+			position:relative;
+			padding-bottom:10px;
+		}
+
+		#hotels_search ol li:after {
+			content:".";
+			display:block;
+			height:0;
+			clear:both;
+			visibility:hidden;
+		}
+
+			#hotels_search ol li { display:inline-block; }
+
+			/* Hide from IE Mac \*/
+			#hotels_search ol li { display:block; }
+			/* End hide from IE Mac */	
+
+		#hotels_search ol li label {
+			font-weight:bold;
+			text-transform:capitalize;
+			color:#333;
+			font-size:11px;
+		}	
+
+			/* location */
+
+			#hotels_search .wg_location {}
+
+					#hotels_search .wg_location label { 
+						float:left;
+						display:block;
+						width:65px;
+						line-height:20px;
+					}
+
+					#hotels_search .wg_location input {
+						float:left;
+						padding:3px;
+						width:200px;
+						border:1px solid #666;
+					}
+
+			/* date */		
+
+			#hotels_search .wg_date {}
+
+				#hotels_search .wg_ratings label,
+				#hotels_search .wg_date label {
+					float:left;
+					clear:left;
+					display:block;
+					width:65px;
+					line-height:20px;
+				}
+
+				#hotels_search .wg_date input {			
+					float:left;
+					padding:2px 2px;
+					border:1px solid #666;
+					background:#FFF url(/media/sites/wegobox/images/icon-calendar.gif) no-repeat right center;
+					width:97px;	
+				}
+				
+			#hotels_search .wg_extra {
+				position:absolute;
+				top:49px;
+				right:6px;
+				width:100px;
+			}
+			html>body #hotels_search .wg_extra { top:44px; }			
+			
+			#hotels_search .wg_guests {
+				position:absolute;
+				top:82px;
+				right:6px;
+				width:100px;				
+			}			
+			html>body #hotels_search .wg_guests { top:77px; }
+			
+			#hotels_search .wg_guests label,			
+			#hotels_search .wg_extra label {
+				float:left;
+				clear:left;
+				display:block;
+				width:47px;
+				line-height:20px;
+			}
+				
+					#hotels_search .wg_extra select,
+					#hotels_search .wg_guests select {
+						float:left;
+						width:44px;
+					}
+
+			/* submit */
+
+			#wg_hotels_submit	{
+				width:80px;
+				height:30px;
+				float:right;
+			}		
+
+	/* RESEARCH SEARCH */
+
+	#research_search { padding-top:3px; }
+
+	#research_search ol {
+		padding:12px;
+		position:relative;
+	}
+
+		#research_search ol li {
+			position:relative;
+			padding-bottom:10px;
+		}
+
+		#research_search ol li:after {
+			content:".";
+			display:block;
+			height:0;
+			clear:both;
+			visibility:hidden;
+		}
+
+			#research_search ol li { display:inline-block; }
+
+			/* Hide from IE Mac \*/
+			#research_search ol li { display:block; }
+			/* End hide from IE Mac */	
+
+		#research_search ol li label {
+			font-weight:bold;
+			color:#333;
+			font-size:11px;
+		}	
+
+			/* location */
+
+			#research_search .wg_location {}
+
+					#research_search .wg_location label {
+						clear:left;
+						display:block;
+						line-height:16px;
+					}
+
+					#research_search .wg_location input {
+						width:268px;
+						padding:3px;
+						border:1px solid #666;
+					}
+
+			/* destinations */		
+
+			#research_search .wg_filters { padding-bottom:0px; }
+			html>body #research_search .wg_filters { padding-bottom:5px; }
+
+				#research_search .wg_filters label {
+					clear:left;
+					display:block;
+					line-height:10px;
+				}
+
+				#research_search .wg_filters ul {}
+
+					#research_search .wg_filters ul li {			
+						display:block;
+						float:left;
+						height:10px;
+						padding:0 2px;
+						width:126px;
+					}
+						html>body	#research_search .wg_filters ul li { padding:2px; height:13px; }
+
+						#research_search .wg_filters ul li input { float:left; }
+
+						#research_search .wg_filters ul li label {
+							color:#333;
+							font-size:11px;
+							font-weight:normal;
+							text-decoration:none;
+							cursor:pointer;
+							display:inline;
+							line-height:10px;
+						}			
+							html>body #research_search .wg_filters ul li label { line-height:13px; }						
+
+			/* submit */
+
+			#research_search .wg_search_button	{ padding-top:0px; }		
+			html>body #research_search .wg_search_button	{ padding-top:5px; }		
+
+			#wg_research_submit	{
+				width:80px;
+				height:30px;
+				float:right;
+			}
+
+			
+/* FEATURES */
+
+	/* autocomplete */
+	
+	.ac_results { font-size:11px; padding:.25em; }
+
+	/* datepicker */
+	
+	.ui-datepicker-multi-2 { width:284px !important; }
+	.ui-datepicker-multi-2 .ui-datepicker-group { width:142px; font-size:10px; }	
+	.ui-datepicker td span, .ui-datepicker td a { padding:0; text-align:center; }
+	.ui-datepicker th { padding:0; }
+	.ui-datepicker .ui-datepicker-header { margin-bottom:1.2em; }
+	
+	/* deals ticker */
+	#wg_deals_listing { padding:12px; }
+	
+	#wg_deals_listing #wg_deals_list {
+		height:168px;
+	}
+
+	.wg_deals_pagination {
+		position:absolute;
+		right:10px;
+		bottom:35px;
+	}	
+		
+	/* powered by on submit */
+	.powered_by {
+		background:#EEE none repeat scroll 0 0;
+		border:1px solid #DDD;
+		height:148px;
+		padding-top:30px;
+		left:7px;
+		position:absolute;
+		text-align:center;
+		top:34px;
+		width:283px;
+	}
+	
+		.powered_by span {
+			display:block;
+			width:220px;
+			height:19px;
+			background:url(/media/sites/wegobox/images/powered_loader_long.gif) no-repeat left center;
+			top:106px;
+			left:31px;
+			position:absolute;
+			text-indent:-9999px;
+		}
+		
+		.powered_by a {
+			display:block;
+			width:106px;
+			height:97px;
+			background:url(/media/sites/wegobox/images/powered_by.gif) no-repeat center center;
+			text-indent:-9999px;
+			border:none;
+			margin:0 auto;
+		}
+		
+	/* validation */
+	
+	#flights_search input.error,
+	#hotels_search input.error,
+	.searchbox .error {
+		background-color:#FBE3E4;
+		color:#D12F19;
+	}
+	
+	input.optional {
+		background-color:#FAFAFA !important;
+		font-style:italic;
+		color:#666;
+	}	

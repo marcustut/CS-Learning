@@ -1,0 +1,77 @@
+.ac_results {
+	border: 1px solid #999;
+	background-color:#eee;
+	overflow: hidden;
+	margin-top:-1px;
+	margin-left:0;
+/*	padding:.3em .4em .3em .3em;*/
+	padding:.2em;
+	z-index: 99999;
+	font-size:.9em;
+}
+
+.ac_results ul {
+	background:#FFF;
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ac_results li {
+	margin: 0px;
+	padding: .1em .3em;
+	cursor: default;
+	display: block;
+	/* 
+	if width will be 100% horizontal scrollbar will apear 
+	when scroll mode will be used
+	*/
+	/*width: 100%;*/
+	font: menu;
+	font-size: 1em;
+	/* 
+	it is very important, if line-height not setted or setted 
+	in relative units scroll will be broken in firefox
+	*/
+	line-height: 1.4;
+	overflow: hidden;
+	/*
+	added
+	*/
+	padding:0.1em 3.6em 0.1em 0.3em;
+	position:relative;
+}
+
+	.ac_results li em {
+		font-style:normal;
+		color:#333;
+	}
+
+	.ac_results li p {
+		color:#666;
+		float:right;
+		margin-bottom:0;
+		position:absolute;
+		right:1px;
+		top:1px;
+	}
+	
+	.ac_results li strong { font-weight:bold; }	
+
+.ac_loading {
+	background: white url(htpp://www.wego.com/media/sites/wegobox/images/loader.gif) right center no-repeat;
+}
+
+.ac_odd {
+	background-color: #eee;
+}
+
+.ac_over {
+	background-color: #379D02;
+	color: white;
+}
+
+	.ac_results .ac_over em { color:#FFC;}
+	.ac_results .ac_over p { color: #FF6; font-weight:bold; }

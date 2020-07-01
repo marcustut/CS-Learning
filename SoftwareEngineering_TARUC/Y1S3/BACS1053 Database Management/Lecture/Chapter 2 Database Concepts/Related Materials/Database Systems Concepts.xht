@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN" "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:cnx="http://cnx.rice.edu/cnxml" class=" ext-strict">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=IE7Compatible,IE=IE7" />
+    <meta property="og:title" content="Database Systems Concepts" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="http://cnx.org/book_icon_cnx.png" />
+    <meta property="og:url" content="http://cnx.org/content/m28156/latest/" />
+    <meta property="og:site_name" content="OpenStax_CNX" />
+    <meta property="fb:admins" content="100002202416123" />
+    <meta property="fb:page_id" content="81379287964" />
+    <meta property="og:description" content="This module introduces the fundamental concepts of database systems" />
+    <!-- base href="http://cnx.org/content/m28156/latest/" -->
+    <title>Database Systems Concepts</title>
+    <link rel="stylesheet" type="text/css" href="Database%20Systems%20Concepts_files/ext-all.css" />
+    <link type="text/css" href="Database%20Systems%20Concepts_files/document.css" media="screen" title="newlook" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="Database%20Systems%20Concepts_files/print.css" media="print" />
+    <script type="text/javascript" src="Database%20Systems%20Concepts_files/rhaptosutils.js"> </script>
+    <script type="text/javascript" src="Database%20Systems%20Concepts_files/toggler.js"> </script>
+    <script type="text/javascript" src="Database%20Systems%20Concepts_files/exercise.js"> </script>
+    <script type="text/javascript" src="Database%20Systems%20Concepts_files/qml_1-0.js"> </script>
+    <script type="text/javascript" src="Database%20Systems%20Concepts_files/ext.js"> </script>
+    <script type="text/javascript" src="Database%20Systems%20Concepts_files/jquery.js"> </script>
+    <script type="text/javascript" src="Database%20Systems%20Concepts_files/jquery-plugins.js"> </script>
+    <script type="text/javascript" src="Database%20Systems%20Concepts_files/lightweight-branding-banner.js"> </script>
+    <script type="text/javascript" src="Database%20Systems%20Concepts_files/dynamic.js"> </script>
+    <script type="text/javascript">var portal_url="http://cnx.org";</script>
+    <script type="text/javascript" src="Database%20Systems%20Concepts_files/register_function.js"> </script>
+    <script type="text/javascript" src="Database%20Systems%20Concepts_files/login.js"> </script>
+    <link rel="source" title="Source" type="text/xml" href="http://cnx.org/content/m28156/1.1/source" />
+    <link rel="module" title="Module" type="text/xml" href="http://cnx.org/content/m28156/latest/" />
+    <link rel="meta" type="application/rdf+xml" href="http://cnx.org/content/m28156/latest/content_license" />
+    <link rel="search" title="Search this site" href="http://cnx.org/content/search" />
+    <link rel="search" title="OpenStax_CNX" href="http://cnx.org/opensearchdescription" type="application/opensearchdescription+xml" />
+    <script type="text/javascript" src="Database%20Systems%20Concepts_files/MathJax.js">
+            MathJax.Hub.Config({
+                extensions: ["mml2jax-bugfix.js"],
+                menuSettings: {zoom:"Click"},
+                "HTML-CSS": {scale:110},
+                jax: ["input/MathML","output/HTML-CSS"]
+            });
+            if(location.href.split("#").length != 1) {
+              MathJax.Hub.Register.StartupHook("End", function() {location.href = location.href; });
+            }
+        </script><style type="text/css">#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style>
+  </head>
+  <body onload="constructHintCounter(); togglerInitialSettings();" id="cnx_module" class="  ext-gecko ext-gecko2"><div id="MathJax_Message" style="display: none;"></div>
+    <div id="cnx_portal-top">
+      <p class="hiddenStructure">
+        <a href="#cnx_content_title">Skip to content</a>
+        <a href="#cnx_sidebar_column">Skip to navigation</a>
+      </p>
+      <ul id="cnx_portal-siteactions">
+        <li class="first">
+          <a href="http://cnx.org/login_form">Log In</a>
+        </li>
+        <li>
+          <a href="http://cnx.org/aboutus/contact">Contact Us</a>
+        </li>
+        <li>
+          <a href="http://cnx.org/bug_submit_form">Report a Bug</a>
+        </li>
+        <li>
+          <a href="http://cnx.org/aboutus/cnx_donate">
+            <img src="Database%20Systems%20Concepts_files/cnx-donate-button.png" alt="donate button" style="vertical-align: middle;" />
+          </a>
+        </li>
+      </ul>
+      <div id="cnx_portal-searchbox">
+        <form name="content_search" action="http://cnx.org/content/search">
+          <input type="hidden" name="target" />
+          <label for="cnx_searchGadget" class="hiddenStructure">Search: </label>
+          <input type="text" id="cnx_searchGadget" name="words" size="20" accesskey="s" tabindex="1" />
+          <input type="hidden" name="allterms" value="weakAND" />
+          <input type="submit" class="searchButton" accesskey="s" tabindex="2" name="search" value="Search" />
+        </form>
+      </div>
+      <h1 id="cnx_portal-logo">
+        <a href="http://cnx.org/" title="OpenStax_CNX">OpenStax_CNX</a>
+      </h1>
+      <div id="cnx_portal-globalnav">
+        <ul>
+          <li>
+            <a href="http://cnx.org/">Home</a>
+          </li>
+          <li class="selected">
+            <span class="hiddenStructure">Selected:</span>
+            <a href="http://cnx.org/content/">Content</a>
+          </li>
+          <li>
+            <a href="http://cnx.org/lenses/">Lenses</a>
+          </li>
+          <li>
+            <a href="http://cnx.org/aboutus/">About Us</a>
+          </li>
+          <li>
+            <a href="http://cnx.org/help/">Help</a>
+          </li>
+          <li>
+            <a href="http://cnx.org/mydashboard">MyCNX</a>
+          </li>
+        </ul>
+      </div>
+      <div id="cnx_portal-breadcrumbs">You are here: <a href="http://cnx.org/">Home</a> » <a href="http://cnx.org/content/">Content</a> » Database Systems Concepts</div>
+    </div>
+    <div class="cnx_branding_banner" style="display:none; background-color:#EFE817;color:#000000;">
+          Content affiliated with:
+        <a href="http://cnx.org/lenses/vocw/affiliation" style="color:#000000;">Vietnam OpenCourseWare's Lens</a></div>
+    <div id="cnx_columns">
+      <div id="cnx_sidebar_column"><div class="cnx_branding_logo" style="display:none;"><a href="http://cnx.org/lenses/vocw/affiliation"><img src="Database%20Systems%20Concepts_files/logo.gif" alt="Vietnam OpenCourseWare's Lens" /></a></div><h2 class="hiddenStructure">Navigation</h2><div class="portletContainer" id="cnx_lens_info"><dl class="portlet"><dt class="portletHeader"><span class="portletTopLeft"> </span><span><h3>Lenses</h3></span><span class="portletTopRight"> </span></dt><dd class="portletItem odd"><div class="lensinfowrap"><p id="cnx_what_is_a_lens"><a href="http://cnx.org/help/viewing/lenses" class="lenslink" id="ext-gen14">What is a lens?</a></p><div class="lensinfo hiddenStructure"><h4 class="hiddenStructure">Definition of a lens</h4><img src="Database%20Systems%20Concepts_files/lenses-large.png" class="lensinfologo" alt="Diagram of lenses" /><h5>Lenses</h5><p>A
+ lens is a custom view of the content in the repository. You can think 
+of it as a fancy kind of list that will let you see content through the 
+eyes of organizations and people you trust.</p><h5>What is in a lens?</h5><p>Lens
+ makers point to materials (modules and collections), creating a guide 
+that includes their own comments and descriptive tags about the content.</p><h5>Who can create a lens?</h5><p>Any individual member, a community, or a respected organization.</p><h5>
+        What are tags?
+        <img src="Database%20Systems%20Concepts_files/tags.png" class="tagicon" alt="tag icon" /></h5><p>Tags
+ are descriptors added by lens makers to help label content, attaching a
+ vocabulary that is meaningful in the context of the lens.</p></div></div><h4 id="cnx_this_content_is_ellipsis">This content is ...</h4><div class="lensinfowrap"><h4>Affiliated with <a href="http://cnx.org/help/glossary#affiliation" class="lenslink" id="ext-gen15">(<span class="hiddenStructure">What does "Affiliated with" mean</span>?)</a></h4><span class="lensinfo hiddenStructure">This
+ content is either by members of the organizations listed or about 
+topics related to the organizations listed. Click each link to see a 
+list of all content affiliated with the organization.</span></div><ul id="cnx_affiliations_expanded"><li class="lensinfowrap"><a href="http://cnx.org/lenses/vocw/affiliation" class="lenslink" id="ext-gen16">VOCW</a><div class="lensinfo hiddenStructure"><img src="Database%20Systems%20Concepts_files/logo_thumb.png" class="lensinfologo" alt="Logo for Vietnam OpenCourseWare" /><p><span class="lensinfohelp">This module is included in</span><strong>Lens:</strong> <span class="lensinfotitle">Vietnam OpenCourseWare's Lens</span><br /><strong>By: </strong> Vietnam OpenCourseWare</p><p class="lensinfohelp">
+          Click the
+          <strong>"VOCW"</strong>
+              link to see all content affiliated with them.
+            </p></div></li></ul></dd></dl></div><div class="portletContainer" id="cnx_related_material"><dl class="portlet"><dt class="portletHeader"><span class="portletTopLeft"> </span><span><h3>Related material</h3></span><span class="portletTopRight"> </span></dt><dd class="portletItem odd"><h4>Similar content</h4><ul><li class="cnx_collection"><a href="http://cnx.org/content/col10803/latest/">Signals and Systems</a></li><li class="cnx_collection"><a href="http://cnx.org/content/col10561/latest/">Collaborative Statistics (with edits: Teegarden)</a></li><li class="cnx_collection"><a href="http://cnx.org/content/col10790/latest/">Software Engineering</a></li><li class="portletMore"><a href="http://cnx.org/content/similarity?objectId=m28156" title="More links to similar content">More<span class="hiddenStructure"> similar content</span> 
+                          »
+                        </a></li></ul></dd></dl></div><div class="portletContainer" id="cnx_recent_viewed"><dl class="portlet"><dt class="portletHeader"><span class="portletTopLeft"> </span><span><h3><a href="#cnx_recentview_contents" id="cnx_recentview_header" onclick="twist_toggle('cnx_recentview'); return false;">Recently <span style="white-space: nowrap;">Viewed <img src="Database%20Systems%20Concepts_files/arrow-open.png" id="cnx_recentview_collapse" alt="" style="display: none;" /><img src="Database%20Systems%20Concepts_files/arrow-closed.png" id="cnx_recentview_expand" alt="" style="display: inline;" /></span></a></h3></span><span class="portletTopRight"> </span></dt><dd class="portletItem odd"><div id="cnx_recentview_contents" style="display: none;">This feature requires Javascript to be enabled.</div></dd></dl></div> </div>
+      <div id="cnx_content_column">
+        <div id="cnx_actions_top" style="display: block;">
+
+  <!-- PRINT -->
+  <div id="cnx_actions_print" class="ca_button" style="display: block;">
+    <a href="#" onclick="window.print(); return false;" class="ca_single ca_button_link" id="cnx_actions_print_link">
+      <span>Print this page</span>
+    </a>
+  </div>
+
+  <!-- DOWNLOAD -->
+  
+
+    <div id="cnx_actions_download" class="ca_button ca_menu">
+      <a href="#" class="ca_button_link" id="cnx_actions_download_link">
+        <span>Download</span>
+        <img class="ca_drop_arrow" src="Database%20Systems%20Concepts_files/arrow-down.png" /><img class="ca_drop_reverse_arrow" src="Database%20Systems%20Concepts_files/arrow-up.htm" />
+      </a>
+
+      <div id="cnx_actions_download_contents" class="ca_drop_contents">
+        <a href="#" class="ca_drop_close" id="ext-gen56">x</a>
+        
+        
+          <h3 class="ca_header">Download module as:</h3>
+          <ul class="ca_list">
+            <li class="ca_list_item ca_pdf">
+              <a href="http://cnx.org/content/m28156/1.1/?format=pdf" onmousedown="try{var t=_gat._getTracker('UA-7903479-1'); t._initData(); t._setDomainName('.cnx.org'); t._trackPageview(window.location.pathname+'?event=module:download:pdf', 0);}catch(err){}">
+                PDF
+              </a>
+            </li>
+            
+            <li class="ca_list_item">
+              <a href="http://cnx.org/content/m28156/1.1/content_info#cnx_downloads_header">More downloads ...</a>
+            </li>
+          </ul>
+        
+      </div>
+    </div>
+  
+
+    <!-- REUSE / EDIT -->
+    <div id="cnx_actions_reuse_edit" class="ca_button ca_menu">
+      <a href="#" class="ca_button_link" id="cnx_actions_reuse_edit_link">
+        <span>Reuse</span>
+        /
+        <span>Edit</span>
+
+        <img class="ca_drop_arrow" src="Database%20Systems%20Concepts_files/arrow-down.png" /><img class="ca_drop_reverse_arrow" src="Database%20Systems%20Concepts_files/arrow-up.htm" />
+      </a>
+      <div id="cnx_actions_reuse_edit_contents" class="ca_drop_contents">
+        <a href="#" class="ca_drop_close" id="ext-gen57">x</a>
+
+          
+
+          
+
+          
+            <h3 class="ca_header">Module:</h3>
+              <ul class="ca_list">
+              <li class="ca_list_item ca_reuse_edit">
+              
+              <span class="lensinfowrap">
+              <a id="cnx_actions_reuse_edit_popup_link_b" class="lenslink cnx_reuse_edit_trigger_link" href="http://cnx.org/reuse_edit?contentId=m28156&amp;version=1.1&amp;returnTo=http://cnx.org/content/m28156/latest"><input type="hidden" class="cnx_reuse_edit_contentId" name="contentId" value="m28156" /><input type="hidden" class="cnx_reuse_edit_version" name="version" value="1.1" /><input type="hidden" class="cnx_reuse_edit_urlbase" name="urlbase" value="http://cnx.org/content/m28156/latest" />
+                  Reuse or edit</a>
+              <span class="lensinfo hiddenStructure cnx_login_required">Login Required</span>
+              </span>
+            
+              </li>
+            </ul>
+          
+
+        <div class="lensinfowrap ca_help_link" id="cnx_actions_reuseeditwhat">
+          <a href="http://cnx.org/help/authoring/expressedit" class="lenslink" id="ext-gen18">(How do I reuse or edit?)</a>
+          
+          <div class="lensinfo hiddenStructure">
+            <h4>Check out and edit</h4>
+            <p>
+            If you have permission to edit this content, using the 
+"Reuse / Edit" action will allow you to check the content out into your 
+Personal Workspace or 
+            a shared Workgroup and then make your edits.
+            </p>
+            <h4>Derive a copy</h4>
+            <p>
+            If you don't have permission to edit the content, you can still use "Reuse / Edit" to adapt the content 
+            by creating a derived copy of it and then editing and publishing the copy.
+            </p>
+          </div>
+          
+        </div>
+
+      </div>
+    </div>
+
+  
+
+    <!-- LENS -->
+    <div id="cnx_actions_addtolens" class="ca_button ca_menu">
+      <a href="#" class="ca_button_link" id="cnx_actions_addtolens_link">
+        <span>Add to a lens</span>
+        <img class="ca_drop_arrow" src="Database%20Systems%20Concepts_files/arrow-down.png" /><img class="ca_drop_reverse_arrow" src="Database%20Systems%20Concepts_files/arrow-up.htm" />
+      </a>
+      <div id="cnx_actions_addtolens_contents" class="ca_drop_contents">
+        <a href="#" class="ca_drop_close" id="ext-gen58">x</a>
+        
+        
+          <h3 class="ca_header">Add module to:</h3>
+          <ul class="ca_list">
+            <li class="ca_list_item ca_lens">
+              <span class="lensinfowrap">
+                <a id="cnx_actions_lens_popup_link_mod" class="lenslink cnx_lens_trigger_link" href="http://cnx.org/lens_add?contentId=m28156&amp;version=1.1&amp;returnTo=http://cnx.org/content/m28156/latest"><input type="hidden" class="cnx_lens_contentId" name="contentId" value="m28156" /><input type="hidden" class="cnx_lens_version" name="version" value="1.1" /><input type="hidden" class="cnx_lens_urlbase" name="urlbase" value="http://cnx.org/content/m28156/latest" /><input type="hidden" class="cnx_lens_title" name="lenstitle" value="Add to a lens" />A lens I own</a>
+                <span class="lensinfo hiddenStructure cnx_login_required">Login Required</span>
+              </span>
+            </li>
+            
+          </ul>
+        
+        <div class="lensinfowrap ca_help_link" id="cnx_actions_lenswhat">
+          <a href="http://cnx.org/help/viewing/lenses" class="lenslink" id="ext-gen20">(What is a lens?)</a>
+          
+              <div class="lensinfo hiddenStructure">
+                <h4 class="hiddenStructure">Definition of a lens</h4>
+                <img src="Database%20Systems%20Concepts_files/lenses-large.png" class="lensinfologo" alt="Diagram of lenses" />
+                <h5>Lenses</h5>
+                <p>A lens is a custom 
+                  view of the content in the repository.  You can think of it as a 
+                  fancy kind of list that will let you see content 
+                  through the eyes of organizations and people you 
+                  trust.
+                </p>
+                <h5>What is in a lens?</h5>
+                <p>Lens makers 
+                  point to materials (modules and 
+                  collections), creating a guide that includes their own 
+                  comments and descriptive tags about the content.
+                </p>
+                <h5>Who can create a lens?</h5>
+                <p>Any individual 
+                  member, a community, or a respected 
+                  organization.
+                </p>
+                <h5>
+                  <span>What are tags?</span>
+                  <img src="Database%20Systems%20Concepts_files/tags.png" class="tagicon" alt="tag icon" />
+                </h5>
+                <p>Tags are descriptors 
+                  added by lens makers to help label content, attaching a 
+                  vocabulary that is meaningful in the context of the lens.
+                </p>
+              </div>
+              
+        </div>
+        
+      </div>
+    </div>
+
+
+    <!-- FAVORITES -->
+    <div id="cnx_actions_favorites" class="ca_button ca_menu">
+      <a href="#" class="ca_button_link ca_not_in_favorites" id="cnx_actions_favorites_link">
+        <span class="ca_text">Add to Favorites</span>
+        <img class="ca_drop_arrow" src="Database%20Systems%20Concepts_files/arrow-down.png" /><img class="ca_drop_reverse_arrow" src="Database%20Systems%20Concepts_files/arrow-up.htm" />
+      </a>
+      <div id="cnx_actions_favorites_contents" class="ca_drop_contents">
+        <a href="#" class="ca_drop_close" id="ext-gen59">x</a>
+        
+        
+          <h3 class="ca_header">Add module to:</h3>
+          <ul class="ca_list">
+            <li class="ca_list_item ca_favorites">
+              <span>
+                
+                
+                  <span class="lensinfowrap">
+                    <a id="cnx_actions_fav_popup_link_mod" class="lenslink cnx_lens_trigger_link" href="http://cnx.org/favorites_add?contentId=m28156&amp;version=1.1&amp;returnTo=http://cnx.org/content/m28156/latest"><input type="hidden" class="cnx_lens_contentId" name="contentId" value="m28156" /><input type="hidden" class="cnx_lens_version" name="version" value="1.1" /><input type="hidden" class="cnx_lens_urlbase" name="urlbase" value="http://cnx.org/content/m28156/latest" /><input type="hidden" class="cnx_lens_innerform" name="innerform" value="favorites_add_inner" /><input type="hidden" class="cnx_lens_title" name="title" value="Add to lens: My Favorites" />My Favorites</a>
+                    <span class="lensinfo hiddenStructure cnx_login_required">Login Required</span>
+                  </span>
+                
+              </span>
+            </li>
+          </ul>
+        
+
+        <div class="lensinfowrap ca_help_link" id="cnx_actions_favoriteswhat">
+          <a href="http://cnx.org/help/viewing/lenses" class="lenslink" id="ext-gen22">(What is My Favorites?)</a>
+          <div class="lensinfo hiddenStructure">
+            <p>
+            'My Favorites' is a special kind of lens which you can use to bookmark modules and
+            collections. 'My Favorites' can only be seen by you, and collections
+            saved in 'My Favorites' can remember the last module you were on. You need an account
+            to use 'My Favorites'.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  
+
+</div>
+        <div id="content_template_messages"> </div>
+        <div id="cnx_module_header">
+          <div class="cnx_social_media" id="cnx_social_media_top" style="display: block; float: right;">
+            <span class="cnx_google">
+              <iframe scrolling="no" frameborder="0" vspace="0" tabindex="-1" style="position: static; left: 0pt; top: 0pt; width: 65px; height: 20px; visibility: visible;" src="Database%20Systems%20Concepts_files/fastbutton.htm" marginwidth="0" marginheight="0" hspace="0" allowtransparency="true"> </iframe>
+            </span>
+            <span class="cnx_facebook">
+              <iframe scrolling="no" frameborder="0" src="Database%20Systems%20Concepts_files/like.htm" allowtransparency="true"> </iframe>
+            </span>
+            <span class="cnx_twitter">
+              <iframe scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-count-horizontal" title="Tweet Button" src="Database%20Systems%20Concepts_files/tweet_button.htm"> </iframe>
+            </span>
+          </div>
+          <h1 id="cnx_content_title">Database Systems Concepts</h1>
+          <p id="cnx_authorship"><span class="cnx_before">Module by:</span> <a href="http://cnx.org/member_profile/anhnk_vocw">Nguyen Kim Anh</a>.  <a class="cnx_email_author" href="mailto:webmaster@vocw.edu.vn?cc=cnx@cnx.org&amp;subject=Feedback%20on%20OpenStax_CNX%20module:%20Database%20Systems%20Concepts&amp;body=Feedback%20on%20OpenStax_CNX%20module:%20Database%20Systems%20Concepts%20%28http://cnx.org/content/m28156/latest/%29" title="E-mail the author of the module">E-mail the author</a></p>
+          <p id="cnx_abstract"><span class="cnx_before">Summary: </span>
+      <span class="span">This module introduces the fundamental concepts of database systems</span>
+    </p>
+        </div>
+        <div class="cnx_clear"></div>
+        <div xmlns:md="http://cnx.rice.edu/mdml/0.4" xmlns:qml="http://cnx.rice.edu/qml/1.0" xmlns:mod="http://cnx.rice.edu/#moduleIds" xmlns:bib="http://bibtexml.sf.net/" id="cnx_main">
+      <div class="section" id="id-845744021374"><h2 class="section-header"><strong class="title">Before the advent of Database systems</strong></h2><div class="section-contents"><p class="para" id="id3327479">One
+ way to keep the information on a computer is to store it in the 
+permanent files. The system has a number of application programs, each 
+of them is defined to manipulate the data files. These application 
+programs have been written on request of the users in the organization. 
+New application will be added to the system as the need arises. The 
+system just described is called the file-based system. </p><p class="para" id="id3327490">Consider
+ a traditional banking system which using the file-based system in 
+managing the organization’s data in the picture below. As we can see, 
+there are different departments in the Bank, each of them have their own
+ applications which manage and manipulate differents data files. For 
+Banking system, the programs can be the one to debit or credit an 
+account, , find the balance of an account, add a new mortgage loan or 
+generate monthly statements etc. </p><div class="figure" id="id3327511"><table width="50%" border="0" align="center" cellspacing="0" cellpadding="0"><caption align="bottom" class="figure-caption caption"><strong class="cnx_label">Figure 1: </strong>File-based approach for banking system</caption><tbody><tr><td class="inner-figure"><span class="media" id="id1171736954188"><img src="Database%20Systems%20Concepts_files/graphics1.png" alt="Figure 1 (graphics1.png)" /></span></td></tr></tbody></table></div><p class="para" id="id3327539">Keeping organizational information in this approach has a number of disadvantages, including :</p><div class="list" id="id3327545"><ul class="bullet"><li class="item">Data
+ Redundancy: Since files and applications are created by different 
+programmer of various departments over long period of time, it might 
+lead to several problems: <div class="list" id="id3327557"><ul class="bullet"><li class="item">Inconsistency in data format </li><li class="item">The same information may be kept in several different place (files). </li><li class="item">Data inconsistency which means various copies of the same data are conflicting ; waste storage space and duplication of effort</li></ul></div> </li><li class="item">Data Isolation <div class="list" id="id3327573"><ul class="bullet"><li class="item">It is difficult for new application to retrieve the appropriate data which might be stored in various files.</li></ul></div></li></ul></div><div class="list" id="id3327579"><ul class="bullet"><li class="item">Integrity problems<div class="list" id="id3327584"><ul class="bullet"><li class="item">Data values must satisfy certain consistency contraints which are specified in the application programs. </li><li class="item">It is difficult to add change the programs to enforce new constraint</li></ul></div> </li><li class="item">Security problems<div class="list" id="id3327596"><ul class="bullet"><li class="item">There are constraint regarding accessing privileges </li><li class="item">Application is added to the system in the ad-hoc manner so it is difficult to enforce those constraints</li></ul></div> </li><li class="item">Concurrent – access anomalies<div class="list" id="id3327607"><ul class="bullet"><li class="item">Data
+ may be accessed by many applications that have not been coordinated 
+previously so it is not easy to provide a stategy to support multiple 
+users to update data simutaneously</li></ul></div></li></ul></div><p class="para" id="id3327613">These
+ difficulties have prompted the development of a new approach in 
+managing large amount of organizational information – database approach.
+ In the following section, we shall see the concepts that have been 
+introduced to get over the problems mentioned. </p></div></div>
+      <div class="section" id="id-760984742578"><h2 class="section-header"><strong class="title">Database Approach</strong></h2><div class="section-contents"><p class="para" id="id3327634">Database
+ and database technology play an important role in most of social areas 
+where computer are used, including business, education, medicine etc. To
+ understand the fundamental of database system, we start from 
+introducing the basic concepts in this area.</p><div class="section" id="id-203173770469"><h3 class="section-header"><strong class="title">Fundamental Concepts </strong></h3><div class="section-contents"><p class="para" id="id3327650">Database
+ is a shared collection of related data which will be used to support 
+the activities of particular organization. Database can be viewed as a 
+repository of data that is defined once and then is accessed by various 
+users. A database has the following properties:</p><p class="para" id="id3327663"><div class="list" id="id33276071"><ul class="bullet"><li class="item">It
+ is a representation of some aspect of the real world; or perhaps, a 
+collection of data elements (facts) representing real­world information.
+  </li><li class="item">Database is logical coherent and internally consistent.  </li><li class="item">Database is designed, built, and populated with data for a specific purpose.</li></ul></div></p><p class="para" id="id3327705">Database
+ Management System (DBMS) is a collection of programs that enable users 
+to create, maintain database and control all the access to the database.
+ The primary goal of the DBMS is to provide an environment that is both 
+convenient and efficient for user to retrive and store information.</p><p class="para" id="id3327718">Application program accesses the data stored in the database by sending requests to the DBMS. </p><div class="figure" id="id3327736"><table width="50%" border="0" align="center" cellspacing="0" cellpadding="0"><caption align="bottom" class="figure-caption caption"><strong class="cnx_label">Figure 2: </strong>The components of a database system</caption><tbody><tr><td class="inner-figure"><span class="media" id="id1171742330018"><img src="Database%20Systems%20Concepts_files/graphics2.png" alt="Figure 2 (graphics2.png)" /></span></td></tr></tbody></table></div><p class="para" id="id3327763">With the database approach, we can have the traditional banking system as shown in the following picture. </p><div class="figure" id="id3327772"><table width="50%" border="0" align="center" cellspacing="0" cellpadding="0"><caption align="bottom" class="figure-caption caption"><strong class="cnx_label">Figure 3: </strong>Database approach for banking system</caption><tbody><tr><td class="inner-figure"><span class="media" id="id1171746342603"><img src="Database%20Systems%20Concepts_files/graphics3.png" alt="Figure 3 (graphics3.png)" /></span></td></tr></tbody></table></div></div></div><div class="section" id="id-545338073115"><h3 class="section-header"><strong class="title">Characteristics of Database approach</strong></h3><div class="section-contents"><p class="para" id="id3327808">There
+ are a number of characteristics that distinguish the database approach 
+with the file-based approach. In this section, we describe in detail 
+some of those important characteristics. </p><div class="list" id="id3327815"><ol class="arabic"><li class="item">Self-Describing
+ Nature of a Database System : Database System contains not only the 
+database itself but also the descriptions of data structure and 
+constraints (meta-data). These information is used by the DBMS software 
+or database users if needed. This seperation makes database system 
+totally different from traditional file-based sytem in which data 
+definition is a part of application programs </li><li class="item">Insulation
+ between Program and Data : In the filed base sytem, the structure of 
+the data files is defined in the application programs so if user want to
+ change the structure of a file, all the programs access to that files 
+might need to be changed. On the other hand, in database approach, data 
+structure is stored in the system catalog not in the programs so such 
+changes might not occurs.  </li><li class="item">Support multiple views 
+of data: A view is a subset of the database which is defined and 
+dedicated for particular users of the system. Multiple users in the 
+system might have different views of the system. Each view might 
+contains only the interested data of an user or a group of user.  </li><li class="item">Sharing
+ of data and Multiuser system: A multiuser database system must allow 
+multiple users access the database at the same time. As the result, the 
+multiuser DBMS must have concurrency control strategies to ensure that 
+several user try to access the same data item at a time do so in the 
+manner so that the data always be correct. </li></ol></div></div></div><div class="section" id="id-81780186662"><h3 class="section-header"><strong class="title">Benefits of Database Approach</strong></h3><div class="section-contents"><div class="list" id="id3327871"><ol class="arabic"><li class="item">To control Data Redundancy<div class="list" id="id3327880"><ul class="bullet"><li class="item">In the Database approach, ideally each data item is stored in only one place in the database </li><li class="item">However,
+ in some case redundancy is still exists to improving system 
+performance, but such redundancy is controlled and kept to minimum</li></ul></div> </li><li class="item">Data Sharing<div class="list" id="id3327892"><ul class="bullet"><li class="item">The
+ integration of the whole data in an organization leads to the ability 
+to produce more information from a given amount of data</li></ul></div> </li><li class="item">Enforcing Integrity Constraints<div class="list" id="id3327903"><ul class="bullet"><li class="item">DBMSs should provide capabilities to define and enforce certain constraints such as data type, data uniqueness. </li></ul></div> </li><li class="item">Restricting Unauthorised Access<div class="list" id="id3327910"><ul class="bullet"><li class="item">Not all users of the system have the same accessing privileges.  </li><li class="item">DBMSs should provide a security subsystem to create and control the user accounts. </li></ul></div> </li><li class="item">Data Independence<div class="list" id="id3327924"><ul class="bullet"><li class="item">The system data descriptions are separated from the application programs.  </li><li class="item">Changes to the data structure is handled by the DBMS and not embedded in the program. </li></ul></div> </li><li class="item">Transaction Processing<div class="list" id="id3327935"><ul class="bullet"><li class="item">The
+ DBMS must include concurrency control subsystem to ensure that several 
+users trying to update the same data do so in a controlled manner so 
+that the result of the updates is correct.</li></ul></div> </li><li class="item">Providing multiple views of data<div class="list" id="id3327953"><ul class="bullet"><li class="item">A view may be a subset of the database. Various users may have different views of the database itself.  </li><li class="item">Users may not need to be aware of how and where the data they refer to is stored</li></ul></div> </li><li class="item">Providing backup and recovery facilities<div class="list" id="id3327964"><ul class="bullet"><li class="item">If
+ the computer system fails in the middle of a complex update program, 
+the recovery subsystem is responsible for making sure that the database 
+is restored to the stage it was in before the program started executing.</li></ul></div></li></ol></div></div></div><div class="section" id="id-374106126698"><h3 class="section-header"><strong class="title">Data Models, Schemas and Instances</strong></h3><div class="section-contents"><p class="para" id="id3327978">Data
+ Model is a collection of concepts that can be used to describe the 
+structure of database. Structure of database means data types, 
+relationships and constraints. In addition, most data model include a 
+set of basic operations for specifying retrievals and modifications on 
+the database. Data Model provides a means to achieve Data Abstraction. 
+Data Abstraction is refers to the hiding of certain details of how the 
+data are stored and maintained. With several levels of abstraction, the 
+user’s view of the database is simplified and this leads to the improved
+ understanding of data. </p><p class="para" id="id3328006">There are three levels of abstractions:</p><div class="list" id="id3328010"><ol class="arabic"><li class="item">View
+ level: The highest level of abstraction describes only part of the 
+entire database. Many users will not be concerned with the large 
+database. Instead, they need to access only a part of it so that view 
+level abstraction is defined. There are many views for the same 
+database.  </li><li class="item">Logical level: This level describes what data are stored in the whole database.  </li><li class="item">Physical level: The lowest level of abstraction describes how the data are actually stored. </li></ol></div><div class="section" id="id-713851870572"><h4 class="section-header"><strong class="title">Categories of Data Model</strong></h4><div class="section-contents"><div class="list" id="id3328044"><ul class="bullet"><li class="item">High-level
+ Conceptual Data models: Provide concepts that are close to the way 
+people perceive data to present the data. Typical example of this type 
+is entity – relationship model which use main concepts like entities, 
+attributes, relationships. An entity represents real-world object such 
+as an employee, a project. An entity has some attributes which 
+represents properties of entity such as employee’s name, address, 
+birthdate. A relationship represents association among entities for 
+example a works on relationships between employee and project. </li></ul></div><div class="list" id="id3328068"><ul class="bullet"><li class="item">Record-based
+ Logical Data models: Provide concepts that can be understood by the 
+user but not too far from the way data is stored in the computer. Three 
+well-known data models of this type are relational data model, network 
+data model and hierarchical data model. 
+            <div class="list" id="id3328081"><ul class="bullet"><li class="item">The Relational model represents data as relations. Here is an example of relational schema for the SUPERMARKET database
+            
+            <div class="table" id="id3328086"><table align="center" cellspacing="0" cellpadding="0" summary="" style="border: 1px solid; "><caption align="bottom" class="table-text caption"><span class="cnx_label">Table 1</span></caption><tbody valign="top">
+                  <tr>
+                    <td style="border-left: 0 !important; border-top: 0 !important; border-right: 1px solid; border-bottom: 1px solid; text-align: left !important; ">EMPS (ENAME, SALARY)</td>
+                    <td style="border-left: 0 !important; border-top: 0 !important; border-right: 0 !important; border-bottom: 1px solid; text-align: left !important; ">MANAGERS (ENAME)</td>
+                  </tr>
+                  <tr>
+                    <td style="border-left: 0 !important; border-top: 0 !important; border-right: 1px solid; border-bottom: 1px solid; text-align: left !important; ">DEPTS (DNAME, DEPT#)</td>
+                    <td style="border-left: 0 !important; border-top: 0 !important; border-right: 0 !important; border-bottom: 1px solid; text-align: left !important; ">SUPPLIERS (SNAME, SADDR)</td>
+                  </tr>
+                  <tr>
+                    <td style="border-left: 0 !important; border-top: 0 !important; border-right: 1px solid; border-bottom: 1px solid; text-align: left !important; ">ITEMS (INAME, ITEM#)</td>
+                    <td style="border-left: 0 !important; border-top: 0 !important; border-right: 0 !important; border-bottom: 1px solid; text-align: left !important; ">ORDERS (O#, DATE)</td>
+                  </tr>
+                  <tr>
+                    <td style="border-left: 0 !important; border-top: 0 !important; border-right: 1px solid; border-bottom: 1px solid; text-align: left !important; ">WORKS_IN (ENAME, DNAME)</td>
+                    <td style="border-left: 0 !important; border-top: 0 !important; border-right: 0 !important; border-bottom: 1px solid; text-align: left !important; ">MANAGES (ENAME, DNAME)</td>
+                  </tr>
+                  <tr>
+                    <td style="border-left: 0 !important; border-top: 0 !important; border-right: 1px solid; border-bottom: 1px solid; text-align: left !important; ">CARRIES (INAME, DNAME)</td>
+                    <td style="border-left: 0 !important; border-top: 0 !important; border-right: 0 !important; border-bottom: 1px solid; text-align: left !important; ">PLACED_BY (O#, CNAME)</td>
+                  </tr>
+                  <tr>
+                    <td style="border-left: 0 !important; border-top: 0 !important; border-right: 1px solid; border-bottom: 1px solid; text-align: left !important; ">CUSTOMERS(CNAME,CADDR,BALANCE)</td>
+                    <td style="border-left: 0 !important; border-top: 0 !important; border-right: 0 !important; border-bottom: 1px solid; text-align: left !important; ">INCLUDES (O#, INAME, QUANTITY)</td>
+                  </tr>
+<tr><td style="border-left: 0 !important; border-top: 0 !important; border-right: 1px solid; border-bottom: 0 !important; text-align: left !important; "> SUPPLIES (SNAME, INAME, PRICES)</td><td style="border-left: 0 !important; border-top: 0 !important; border-right: 0 !important; border-bottom: 0 !important; text-align: left !important; "> </td></tr>
+                </tbody></table></div>
+ </li><li class="item">The Network model represents data as record types
+ and also represents a limited type of one to many relationship, called 
+set type. The figure below shows a schema in network model notation     
+   
+            <div class="figure" id="id3328254"><table width="50%" border="0" align="center" cellspacing="0" cellpadding="0"><caption align="bottom" class="figure-caption caption"><strong class="cnx_label">Figure 4: </strong>Sample schema in network model</caption><tbody><tr><td class="inner-figure"><span class="media" id="id1171736609913"><img src="Database%20Systems%20Concepts_files/graphics4.png" alt="Figure 4 (graphics4.png)" /></span></td></tr></tbody></table></div>
+ </li><li class="item">The Hierarchical model represent data as 
+hierarchical tree structures. Each hierarchy represents a number of 
+related records. Here is the schema in hierarchical model notation.     
+        <div class="figure" id="id3328294"><table width="50%" border="0" align="center" cellspacing="0" cellpadding="0"><caption align="bottom" class="figure-caption caption"><strong class="cnx_label">Figure 5: </strong>Sample schema in hierarchical model notation</caption><tbody><tr><td class="inner-figure"><span class="media" id="id1171747909994"><img src="Database%20Systems%20Concepts_files/graphics5.png" alt="Figure 5 (graphics5.png)" /></span></td></tr></tbody></table></div>
+ </li><li class="item">Physical Data models: Provide concepts that describe how data is actually stored in the computer. </li></ul></div></li></ul></div></div></div><div class="section" id="id-835758935506"><h4 class="section-header"><strong class="title">Database Instances and Schemas</strong></h4><div class="section-contents"><p class="para" id="id3328335">The
+ description of the database which is designed in the early stage and is
+ not expected to change frequently is called the database schema. 
+Database system have severals schemas. </p><p class="para" id="id3328352">Since
+ information can be inserted to or deleted from database at anytime, 
+database changes over time. At a particular moment, the collection of 
+information stored in the database is called an instance of the 
+database. </p></div></div></div></div><div class="section" id="id-785474939973"><h3 class="section-header"><strong class="title">ANSI/SPARC Architecture (Three –level Architecture) </strong></h3><div class="section-contents"><p class="para" id="id3328379">Three
+ – level architecture for database system is proposed to archive the 
+characteristics of the database approach. The goal of this architecture 
+is separate the applications and the physical database so the actual 
+details of how data is organized are hided from the users. </p><div class="figure" id="id3328395"><table width="50%" border="0" align="center" cellspacing="0" cellpadding="0"><caption align="bottom" class="figure-caption caption"><strong class="cnx_label">Figure 6: </strong>Three- level Architecture</caption><tbody><tr><td class="inner-figure"><span class="media" id="id1171739861403"><img src="Database%20Systems%20Concepts_files/graphics6.png" alt="Figure 6 (graphics6.png)" /></span></td></tr></tbody></table></div><p class="para" id="id3328427">As we can see from above picture, there are three levels of schemas in the database architecture</p><p class="para" id="id3328434">External level: </p><div class="list" id="id3328439"><ul class="bullet"><li class="item">In this highest level, there exists a number of views which of is defined a part of the actual database.  </li><li class="item">Each
+ view is provided for a user or a group of users so that it helps in 
+simplified the interaction between the user and system. </li></ul></div><p class="para" id="id3328454">Conceptual level: Conceptual Schema in this level describes the logical structure of the whole database.</p><div class="list" id="id3328465"><ul class="bullet"><li class="item">The
+ entire database is described using simple logical concepts such as 
+objects, their properties or relationships. Thus the complexity of the 
+implementation detail of the data with be hided from the users. </li></ul></div><div class="list" id="id3328477"><ul class="bullet"><li class="item">Internal level: Internal Schema in this level describes how the data are actually stored, how to access the data. </li></ul></div></div></div><div class="section" id="id-986850385591"><h3 class="section-header"><strong class="title">Data Independence</strong></h3><div class="section-contents"><p class="para" id="id3328500">Data Independence is the ability to modify the schema in one level without affecting the schema in the higher level. </p><p class="para" id="id3328506">There are two levels of data independence:</p><div class="list" id="id3328510"><ul class="bullet"><li class="item">Logical
+ data independence is the ability to make change in the conceptual 
+schema without causing a modify in the user views or application 
+program.  </li><li class="item">Physical data independence is the 
+ability to make change in the internal schema without causing a modify 
+in the conceptual schema or application program. </li></ul></div><p class="para" id="id3328543">Physical
+ data independence seem to be easier to achieve since the way the data 
+is organized in the memory affect only the performance of the system. 
+Meanwhile, the application program depends much on the logical structure
+ of the data that they are access. </p></div></div><div class="section" id="id-267092404631"><h3 class="section-header"><strong class="title">Database Language</strong></h3><div class="section-contents"><p class="para" id="id3328560">Data Definition Language (DDL): This is used to define the conceptual and internal schemas for a database system.</p><div class="list" id="id3328566"><ul class="bullet"><li class="item">It
+ is not procedural language, rather a language for describing the types 
+of entities and relationships among them in terms of a particular data 
+model.</li></ul></div><div class="list" id="id3328575"><ul class="bullet"><li class="item">Data
+ Manipulation Language (DML): This is used to manipulate the database, 
+which typically include retrieval, insertion, deletion, and modification
+ of the data.</li></ul></div></div></div><div class="section" id="id-400090815978"><h3 class="section-header"><strong class="title">Database Users</strong></h3><div class="section-contents"><div class="section" id="id-359156751035"><h4 class="section-header"><strong class="title">End users </strong></h4><div class="section-contents"><p class="para" id="id3328601">People whose jobs require access to database for querying, updating and generating report. </p><p class="para" id="id3328607">An end users might by one of the following</p><div class="list" id="id3328611"><ul class="bullet"><li class="item">Naïve users who use the existing appication programs to perform their daily tasks </li><li class="item">Sophiticated
+ users are who use their own way to access to the database. This mean 
+they donot use the application program provided in the system. In stead,
+ they might define their own application or describe their need directly
+ in a query languages.  </li><li class="item">Specialized users maintain the personal database by using ready –make program packages that provide easy-to-use menu. </li></ul></div></div></div><div class="section" id="id-447441473125"><h4 class="section-header"><strong class="title">Application Programmer </strong></h4><div class="section-contents"><p class="para" id="id3328667">People
+ implement specific application program to access to the stored data. 
+This kind of user need to familiar with the DBMSs to accomplish their 
+task. </p></div></div><div class="section" id="id-673935516263"><h4 class="section-header"><strong class="title">Database Administrators</strong></h4><div class="section-contents"><p class="para" id="id3328682">A
+ person or a group of people in the organization who is responsible for 
+authorizing the access to the database, monitoring its use and managing 
+all the resource to support the use of the whole database system </p></div></div></div></div><div class="section" id="id-656144457385"><h3 class="section-header"><strong class="title">Classification of Database Systems</strong></h3><div class="section-contents"><p class="para" id="id3328699">The database management systems can be classified based on several criteria. </p><div class="list" id="id3328704"><ul class="bullet"><li class="item">Based
+ on data model: The most popular data model in today commercial DBMSs is
+ relational data model. Almost wellknown DBMSs like Oracle, MS SQL 
+Server, DB2, MySQL are support this model. Other traditional models can 
+be named hierarchical data model , network data model. In the recent 
+year, we are getting familiar with object-oriented data model but this 
+model has not had widespread use. Some examples of Object-oriented DBMSs
+ are O2, ObjectStore or Jasmine.  </li><li class="item">Based on number 
+users we can have single user database system which support one user at a
+ time or multiuser syste,s which support multiple users concurrently </li><li class="item">Based on the ways database is distributed we have centralized or distributed database system
+           <div class="list" id="id3328741"><ul class="bullet"><li class="item">Centralized database system : Data in this kind of system is stored at a single site.  </li><li class="item">Distributed database sytem: Actual database and DBMS software are distributed in various sites connected by a computer network. 
+          <div class="list" id="id3328789"><ul class="bullet"><li class="item">Homogeneous distributed Database Systems<div class="list" id="id3328794"><ul class="bullet"><li class="item">Use the same DBMS software at multiple sites </li><li class="item">Data exchange between various sites can be handle easily </li></ul></div> </li><li class="item">Heterogeneous distributed Database Systems<div class="list" id="id3328807"><ul class="bullet"><li class="item">Different sites might use differents DBMS softwares  </li><li class="item">There is a software to support data exchange between sites</li></ul></div></li></ul></div>
+
+</li></ul></div>
+</li></ul></div><div class="figure" id="id3328752"><table width="50%" border="0" align="center" cellspacing="0" cellpadding="0"><caption align="bottom" class="figure-caption caption"><strong class="cnx_label">Figure 7: </strong>Centralized Database System</caption><tbody><tr><td class="inner-figure"><span class="media" id="id1171734443010"><img src="Database%20Systems%20Concepts_files/graphics7.png" alt="Figure 7 (graphics7.png)" /></span></td></tr></tbody></table></div><div class="figure" id="id3328817"><table width="50%" border="0" align="center" cellspacing="0" cellpadding="0"><caption align="bottom" class="figure-caption caption"><strong class="cnx_label">Figure 8: </strong>Distributed Database System</caption><tbody><tr><td class="inner-figure"><span class="media" id="id1171746003767"><img src="Database%20Systems%20Concepts_files/graphics8.png" alt="Figure 8 (graphics8.png)" /></span></td></tr></tbody></table></div></div></div></div></div>
+  </div>
+        <div id="cnx_actions_bottom">
+          <h2 class="hiddenStructure">
+      Content actions
+    </h2>
+          <div class="cnx_actions_category cnx_social_media" id="cnx_social_media_bottom" style="display: block;">
+      <h3 class="hiddenStructure">
+        Share content
+      </h3>
+      
+      <div class="cnx_actions_group" id="cnx_social_media_bottom_module">
+        <h4>Share module:</h4>
+        <span class="cnx_google">
+          <iframe scrolling="no" frameborder="0" vspace="0" tabindex="-1" style="position: static; left: 0pt; top: 0pt; width: 65px; height: 20px; visibility: visible;" marginwidth="0" marginheight="0" hspace="0" allowtransparency="true" src="Database%20Systems%20Concepts_files/fastbutton_002.htm"> </iframe>
+        </span>
+        <span class="cnx_twitter">
+          <iframe scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-count-horizontal" title="Tweet Button" src="Database%20Systems%20Concepts_files/tweet_button_002.htm">
+          </iframe>
+        </span>
+        <span class="cnx_facebook">
+          <iframe scrolling="no" frameborder="0" allowtransparency="true" src="Database%20Systems%20Concepts_files/like_002.htm"> 
+          </iframe>
+        </span>
+      </div>
+    </div>
+          <div class="cnx_actions_category" id="cnx_actions_category_feedback">
+      <h3>
+        <span>
+          Give feedback:
+        </span>
+      </h3>
+      <div class="cnx_actions_group">
+        
+        
+          
+              
+                <a href="mailto:webmaster@vocw.edu.vn?cc=cnx@cnx.org&amp;subject=Feedback%20on%20OpenStax_CNX%20module:%20Database%20Systems%20Concepts&amp;body=Feedback%20on%20OpenStax_CNX%20module:%20Database%20Systems%20Concepts%20%28http://cnx.org/content/m28156/latest/%29" class="cnx_email_author">
+                  
+                  
+              E-mail the module author</a>
+            
+          
+        
+        
+      </div>
+    </div>
+          <div class="cnx_actions_category" id="cnx_actions_category_download">
+      <h3>
+        <span>
+          Download module as:
+        </span>
+        
+        
+      </h3>
+      <div class="cnx_actions_group">
+        
+      </div>
+      <div class="cnx_actions_group">
+        
+          
+          
+            <a href="http://cnx.org/content/m28156/1.1/?format=pdf" onmousedown="try{var t=_gat._getTracker('UA-7903479-1'); t._initData(); t._setDomainName('.cnx.org'); t._trackPageview(window.location.pathname+'?event=module:download:pdf', 100);}catch(err){}">PDF</a>
+            |
+          
+          
+          <a href="http://cnx.org/content/m28156/1.1/content_info#cnx_downloads_header">More downloads ...</a>
+        
+      </div>
+    </div>
+          <div class="cnx_actions_category" id="cnx_actions_category_addto">
+      <h3>
+        <span>
+          Add module to:
+        </span>
+        
+        
+      </h3>
+      
+
+      <div class="cnx_actions_group">
+        
+
+        
+          <span>
+                
+                
+                  <span class="lensinfowrap">
+                    <a id="cnx_actions_fav_popup_link_mod_bottom" class="lenslink cnx_lens_trigger_link" href="http://cnx.org/favorites_add?contentId=m28156&amp;version=1.1&amp;returnTo=http://cnx.org/content/m28156/latest"><input type="hidden" class="cnx_lens_contentId" name="contentId" value="m28156" /><input type="hidden" class="cnx_lens_version" name="version" value="1.1" /><input type="hidden" class="cnx_lens_urlbase" name="urlbase" value="http://cnx.org/content/m28156/latest" /><input type="hidden" class="cnx_lens_innerform" name="innerform" value="favorites_add_inner" /><input type="hidden" class="cnx_lens_title" name="title" value="Add to lens: My Favorites" />My Favorites</a>
+                    <span class="lensinfo hiddenStructure cnx_login_required">Login Required</span>
+                  </span>
+                
+              </span>
+          <span class="lensinfowrap">
+            <a href="http://cnx.org/help/viewing/lenses" class="lenslink" id="ext-gen24">(?)</a>
+            <div class="lensinfo hiddenStructure">
+            <p>
+            'My Favorites' is a special kind of lens which you can use to bookmark modules and
+            collections. 'My Favorites' can only be seen by you, and collections
+            saved in 'My Favorites' can remember the last module you were on. You need an account
+            to use 'My Favorites'.
+            </p>
+          </div>
+          </span>
+          |
+        
+
+        
+          <span class="lensinfowrap">
+                <a id="cnx_actions_lens_popup_link_mod_bottom" class="lenslink cnx_lens_trigger_link" href="http://cnx.org/lens_add?contentId=m28156&amp;version=1.1&amp;returnTo=http://cnx.org/content/m28156/latest"><input type="hidden" class="cnx_lens_contentId" name="contentId" value="m28156" /><input type="hidden" class="cnx_lens_version" name="version" value="1.1" /><input type="hidden" class="cnx_lens_urlbase" name="urlbase" value="http://cnx.org/content/m28156/latest" /><input type="hidden" class="cnx_lens_title" name="lenstitle" value="Add to a lens" />A lens I own</a>
+                <span class="lensinfo hiddenStructure cnx_login_required">Login Required</span>
+              </span>
+          <span class="lensinfowrap">
+            <a href="http://cnx.org/help/viewing/lenses" class="lenslink" id="ext-gen26">(?)</a>
+            
+              <div class="lensinfo hiddenStructure">
+                <h4 class="hiddenStructure">Definition of a lens</h4>
+                <img src="Database%20Systems%20Concepts_files/lenses-large.png" class="lensinfologo" alt="Diagram of lenses" />
+                <h5>Lenses</h5>
+                <p>A lens is a custom 
+                  view of the content in the repository.  You can think of it as a 
+                  fancy kind of list that will let you see content 
+                  through the eyes of organizations and people you 
+                  trust.
+                </p>
+                <h5>What is in a lens?</h5>
+                <p>Lens makers 
+                  point to materials (modules and 
+                  collections), creating a guide that includes their own 
+                  comments and descriptive tags about the content.
+                </p>
+                <h5>Who can create a lens?</h5>
+                <p>Any individual 
+                  member, a community, or a respected 
+                  organization.
+                </p>
+                <h5>
+                  <span>What are tags?</span>
+                  <img src="Database%20Systems%20Concepts_files/tags.png" class="tagicon" alt="tag icon" />
+                </h5>
+                <p>Tags are descriptors 
+                  added by lens makers to help label content, attaching a 
+                  vocabulary that is meaningful in the context of the lens.
+                </p>
+              </div>
+              
+          </span>
+          
+        
+
+        
+        
+          |
+          <a href="http://www.addthis.com/bookmark.php?v=250&amp;pub=cnx_org&amp;url=http://cnx.org/content/m28156/latest/&amp;title=Database%20Systems%20Concepts">
+            External bookmarks
+          </a>
+          
+        
+        
+      </div>
+    </div>
+          <div class="cnx_actions_category" id="cnx_actions_category_reuse_edit" style="display: block;">
+      <h3>Reuse / Edit:</h3>
+      <div class="cnx_actions_group">
+      
+      
+        
+        
+              <span class="lensinfowrap">
+              <a id="cnx_actions_reuse_edit_popup_link_d" class="lenslink cnx_reuse_edit_trigger_link" href="http://cnx.org/reuse_edit?contentId=m28156&amp;version=1.1&amp;returnTo=http://cnx.org/content/m28156/latest"><input type="hidden" class="cnx_reuse_edit_contentId" name="contentId" value="m28156" /><input type="hidden" class="cnx_reuse_edit_version" name="version" value="1.1" /><input type="hidden" class="cnx_reuse_edit_urlbase" name="urlbase" value="http://cnx.org/content/m28156/latest" />Reuse or edit module</a>
+              <span class="lensinfo hiddenStructure cnx_login_required">Login Required</span>
+              </span>
+            
+        <span class="lensinfowrap">
+          <a class="lenslink" href="http://cnx.org/help/authoring/expressedit" id="ext-gen28">(?)</a>
+          
+          <div class="lensinfo hiddenStructure">
+            <h4>Check out and edit</h4>
+            <p>
+            If you have permission to edit this content, using the 
+"Reuse / Edit" action will allow you to check the content out into your 
+Personal Workspace or 
+            a shared Workgroup and then make your edits.
+            </p>
+            <h4>Derive a copy</h4>
+            <p>
+            If you don't have permission to edit the content, you can still use "Reuse / Edit" to adapt the content 
+            by creating a derived copy of it and then editing and publishing the copy.
+            </p>
+          </div>
+          
+        </span>
+      
+      </div>
+    </div>
+        </div>
+        <div id="cnx_footer">
+          <h2 class="hiddenStructure">Footer</h2>
+          <div id="cnx_partner_logos"><a id="cnx_license_logo" href="http://creativecommons.org/licenses/by/3.0/" alt="Creative Commons Attribution License"><img src="Database%20Systems%20Concepts_files/88x31.png" /></a> <a xmlns:dct="http://purl.org/dc/terms/" id="cnx_oer_logo" href="http://opened.creativecommons.org/definition" rel="dct:conformsTo"><img src="Database%20Systems%20Concepts_files/88x31.gif" alt="Open Educational Resources Logo" /></a></div>
+          <div id="cnx_metadata_links">
+            <p><span id="cnx_more_about">More about this module:</span> <a href="http://cnx.org/content/m28156/latest/content_info">Metadata</a><span> | </span><a href="http://cnx.org/content/m28156/latest/content_info#cnx_downloads_header">Downloads</a><span> | </span><a href="http://cnx.org/content/m28156/latest/content_info#cnx_history_header">Version History</a></p>
+            <ul id="cnx_attribution">
+              <li>
+                <a href="http://cnx.org/content/m28156/latest/content_info#cnx_attribution_header">How to <b>reuse</b> and attribute this content</a>
+              </li>
+              <li>
+                <a href="http://cnx.org/content/m28156/latest/content_info#cnx_cite_header">How to <b>cite</b> and attribute this content</a>
+              </li>
+            </ul>
+          </div>
+          <p id="cnx_license">This work is licensed by <a href="http://cnx.org/member_profile/anhnk_vocw">Nguyen Kim Anh</a> under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License (CC-BY 3.0)</a>, and is an <a xmlns:dct="http://purl.org/dc/terms/" href="http://opened.creativecommons.org/definition" rel="dct:conformsTo">Open Educational Resource</a>. </p>
+          <p id="cnx_updated">Last edited by <a href="http://cnx.org/member_profile/vocw">Vietnam OpenCourseWare</a> on Jul 8, 2009 1:18 am +0000. </p>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div id="cnx_login_dlg" class="cnx_popup" style="display:none">
+      <div class="x-dlg-hd">Login Required</div>
+      <div class="x-dlg-bd" id="cnx_login_inner">
+            Login required for this feature
+          </div>
+    </div>
+    <script src="Database%20Systems%20Concepts_files/ga.js" type="text/javascript"> </script>
+    <script type="text/javascript">
+	      	var _gaq = _gaq || [];
+	        function trackthisGoogleAnalytics(strCode) {
+	          try {
+	            _gaq.push(['user._setAccount', strCode]);
+	            _gaq.push(['user._trackPageview']);
+	          }
+	          catch(err) {}
+	        }
+        </script>
+    <script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-7903479-1']);
+			_gaq.push(['_setDomainName', '.cnx.org']);
+			_gaq.push(['_trackPageview']);
+			_gaq.push(['hewlett._setAccount', 'UA-5033010-1']);
+			_gaq.push(['hewlett._setDomainName', '.cnx.org']);
+			_gaq.push(['hewlett._trackPageview']);
+        </script>
+  </body>
+</html>

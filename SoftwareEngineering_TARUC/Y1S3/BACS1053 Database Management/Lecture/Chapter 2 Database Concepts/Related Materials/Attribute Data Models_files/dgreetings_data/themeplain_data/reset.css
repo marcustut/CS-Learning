@@ -1,0 +1,59 @@
+/** 
+ * RESET STYLESHEET
+ *
+ * Copyright (c) 2008 Wego Pte Ltd
+ * Under GPL (GPL-LICENSE.txt) licenses.
+ * 
+ * This stylesheet fixes browser default inconsistencies to a certain extent.
+ *
+ * http://www.wego.com
+ *
+ */
+
+body {
+	font-size:13px;
+	line-height:1.4;
+	border:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	margin:0;
+	outline:0;
+	padding:0;
+	vertical-align:baseline;
+	font-weight:normal;
+	background-color:#fff;
+}
+
+html, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn,
+em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup,
+tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	font-family:Arial, Verdana, Helvetica, sans-serif;
+	margin:0;
+	outline:0;
+	padding:0;
+	vertical-align:baseline;
+	font-weight:normal;
+}
+
+:focus { outline:0; }
+a { outline:none; }
+ol, ul { list-style:none; }
+blockquote:before, blockquote:after, q:before, q:after { content:""; }
+blockquote, q { quotes: "" ""; }
+
+table {
+	border-collapse:separate;
+	border-spacing:0;
+}
+
+caption, th, td {
+	font-weight:normal;
+	text-align:left;
+}

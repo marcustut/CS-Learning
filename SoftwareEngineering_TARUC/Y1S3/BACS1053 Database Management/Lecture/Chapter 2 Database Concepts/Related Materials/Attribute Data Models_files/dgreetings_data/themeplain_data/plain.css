@@ -1,0 +1,117 @@
+/* 
+ * COLOR TABLE:						  background 					font-color
+ * -------------------------------------------------------------
+ * main-border:							#EEE
+ * main background:					#FFF
+ * -------------------------------------------------------------
+ * NAVIGATION
+ * -------------------------------------------------------------
+ * background: 							#EEE
+ * unselected navigation: 	#DDD								#06C
+ * selected navigation: 		#FFF								#333
+ * -------------------------------------------------------------
+ * FOOTER
+ * -------------------------------------------------------------
+ * background: 							#EEE								#666
+ * 
+ */
+
+#wg_wrap {
+	border:1px solid #EEE !important;
+	background:#FFF !important;
+}
+
+#wg_wrap .searchbox,
+#wg_wrap #deals_search {
+	background:#FFF !important;
+}
+
+	/* Navigation */
+
+	#wg_wrap .wg_navigation {
+		background:#EEE !important;
+	}
+
+	#wg_wrap .wg_navigation ul li a {
+		background:#DDD !important;
+		color:#06C !important;
+	}
+	
+		body.flights #wg_wrap .wg_navigation ul li a#flights_nav,
+		body.hotels #wg_wrap .wg_navigation ul li a#hotels_nav,
+		body.activities #wg_wrap .wg_navigation ul li a#activities_nav,
+		body.research #wg_wrap .wg_navigation ul li a#research_nav,
+		body.deals #wg_wrap .wg_navigation ul li a#deals_nav {
+			background:#FFF !important;
+			color:#333 !important;
+		}
+		
+	/* Footer */
+	
+	#wg_wrap .footer {
+		background:#EEE !important;
+		color:#666 !important;
+	}
+	
+/* MORE OPTIONS */
+
+.wg_more_options {
+	border:1px solid #CCC !important;
+}
+
+	.wg_more_option_links {
+		background:#999 !important;
+		color:#FFF !important;
+	}
+	
+	.close_more_options	{
+		color:#FFC !important;
+	}
+
+	.size_600x70 .more_search_options {
+		color:#06C !important;
+	}
+
+/* AUTOCOMPLETE */
+
+.ac_results .ac_over {
+	background:#666 !important;
+}
+
+	.ac_results .ac_over p,
+	.ac_results .ac_over em {
+		color:#FFF !important;
+	}
+	
+/* DATEPICKER */
+
+.ui-widget-content {
+	background:#FFF !important;
+	border:1px solid #CCC !important;
+}
+
+.ui-widget-header {
+	background:#999 !important;
+	border:1px solid #999 !important;
+	color:#FFF !important;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus {
+	border: 1px solid #CCC !important;
+	background:#666 url(images/ui-bg_glass_75_6EC140_1x400.png) 50% 50% repeat-x !important;
+	color: #FFF !important;
+}
+
+/* DEALS */
+
+#wg_deals_listing p.wg_deals_pagination span.current {
+	background:#06C !important;
+}
+
+#wg_deals_listing li span.price {
+	color:#333 !important;
+}
+
+#wg_deals_listing li span.currency {
+	color:#666 !important;
+}
