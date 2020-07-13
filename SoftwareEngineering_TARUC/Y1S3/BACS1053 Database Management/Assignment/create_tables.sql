@@ -35,7 +35,11 @@ SET serveroutput ON size 30000
 CREATE TABLE federal_states (
     federal_id      CHAR(2),
     name            VARCHAR(50) NOT NULL UNIQUE,
+    state_id        CHAR(2),
 PRIMARY KEY(federal_id),
+CONSTRAINT chk_federal_states_states
+            FOREIGN KEY (state_id)
+            REFERENCES states(state_id),
 CONSTRAINT chk_federal_id CHECK (UPPER(federal_id) in ('KL', 'LB', 'PJ'))
 );
 --------------------------------------------------------------------------------------------------
@@ -46,12 +50,8 @@ CONSTRAINT chk_federal_id CHECK (UPPER(federal_id) in ('KL', 'LB', 'PJ'))
 CREATE TABLE states (
     state_id        CHAR(2),
     name            VARCHAR(50) NOT NULL UNIQUE,
-    federal_id      CHAR(2),
 PRIMARY KEY(state_id),
-CONSTRAINT fk_states_federal_states
-           FOREIGN KEY(federal_id)
-           REFERENCES federal_states(federal_id),
-CONSTRAINT chk_state_id CHECK (UPPER(state_id) in ('JR', 'KD', 'JK', 'MK', 'NS', 'PH', 'PG', 'PK', 'PS', 'SB', 'SR', 'SG', 'TG', 'WP'))
+CONSTRAINT chk_state_id CHECK (UPPER(state_id) in ('JR', 'KD', 'KT', 'MK', 'NS', 'PH', 'PG', 'PK', 'PS', 'SB', 'SR', 'SG', 'TG', 'WP'))
 );
 --------------------------------------------------------------------------------------------------
 
@@ -93,7 +93,7 @@ END;
 -----------------
 CREATE TABLE diseases (
    	disease_id      NUMBER,
-   	name            VARCHAR(50)     NOT NULL UNIQUE,
+   	name            VARCHAR(100)     NOT NULL UNIQUE,
    	description     VARCHAR(255),
    	cure_existed    CHAR(1)         NOT NULL,
    	date_discovered DATE            DEFAULT SYSDATE NOT NULL, -- Default to current date if not specified
@@ -123,8 +123,8 @@ END;
 -- 5. medical_supply --
 -----------------------
 CREATE TABLE medical_supply (
-   	medical_supply_id       NUMBER          NOT NULL,
-   	name                    VARCHAR(50)     NOT NULL,
+   	medical_supply_id       NUMBER          NOT NULL    ,
+   	name                    VARCHAR(100)     NOT NULL,
     quantity                NUMBER(5)       NOT NULL,
    	description             VARCHAR(255),
     disease_id              NUMBER, -- Foreign Key

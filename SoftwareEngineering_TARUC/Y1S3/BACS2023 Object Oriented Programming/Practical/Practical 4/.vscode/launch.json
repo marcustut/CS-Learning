@@ -1,0 +1,42 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug (Launch) - Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-P4Q1<Practical 4_28537155>",
+      "request": "launch",
+      "mainClass": "P4Q1",
+      "projectName": "Practical 4_28537155"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-P4Q23<Practical 4_28537155>",
+      "request": "launch",
+      "mainClass": "P4Q23",
+      "projectName": "Practical 4_28537155"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-P4Q4<Practical 4_28537155>",
+      "request": "launch",
+      "mainClass": "P4Q4",
+      "projectName": "Practical 4_28537155"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-P4Q5<Practical 4_28537155>",
+      "request": "launch",
+      "mainClass": "P4Q5",
+      "projectName": "Practical 4_28537155"
+    }
+  ]
+}
