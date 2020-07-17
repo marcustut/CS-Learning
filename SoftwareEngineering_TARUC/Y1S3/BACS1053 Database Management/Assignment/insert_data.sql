@@ -15,9 +15,9 @@
 -- ALTER TABLE dms.locations DISABLE CONSTRAINT fk_locations_states;
 
 -- Federal States
-INSERT INTO dms.federal_states (federal_id, name) VALUES ('KL','Kuala Lumpur');
-INSERT INTO dms.federal_states (federal_id, name) VALUES ('LB','Labuan');
-INSERT INTO dms.federal_states (federal_id, name) VALUES ('PJ','Putrajaya');
+INSERT INTO dms.federal_states (federal_id, name, state_id) VALUES ('KL','Kuala Lumpur', 'WP');
+INSERT INTO dms.federal_states (federal_id, name, state_id) VALUES ('LB','Labuan', 'WP');
+INSERT INTO dms.federal_states (federal_id, name, state_id) VALUES ('PJ','Putrajaya', 'WP');
 
 -- States
 INSERT INTO dms.states (state_id, name) VALUES ('JR','Johor');

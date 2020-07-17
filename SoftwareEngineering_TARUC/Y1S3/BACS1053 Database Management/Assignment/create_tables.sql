@@ -9,28 +9,46 @@
 --------------------------------------------------------------------------------------
 
 -- No. Tables  : 12
--- 1. federal_states
--- 2. states
+-- 1. states
+-- 2. federal_states
 -- 3. locations
--- 4. contacts
--- 5. diseases
--- 6. medical_supply
--- 7. exams
--- 8. donations
--- 9. shelters
--- 10. victims
--- 11. staffs
--- 12. donors
+-- 4. diseases
+-- 5. medical_supply
+-- 6. exams
+-- 7. shelters
+-- 8. staffs
+-- 9. victims
+-- 10. donors
+-- 11. donations
+-- 12. contacts
+
+-- Settings for Oracle SQL
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MON-YYYY'
 
 -- Startup Screen for Users
 cl scr
-PROMPT 'Creating Tables for Disease Management System (DMS)'
+PROMPT Creating Tables for Disease Management System (DMS)
 
 -- Turning on the output for printing info from PL/SQL
 SET serveroutput ON size 30000
 
+-- TODO: DROP TABLES FIRST
+
+---------------
+-- 1. states --
+---------------
+CREATE TABLE states (
+    state_id        CHAR(2),
+    name            VARCHAR(50) NOT NULL UNIQUE,
+PRIMARY KEY(state_id),
+CONSTRAINT chk_state_id CHECK (UPPER(state_id) in ('JR', 'KD', 'KT', 'MK', 'NS', 'PH', 'PG', 'PK', 'PS', 'SB', 'SR', 'SG', 'TG', 'WP'))
+);
+--------------------------------------------------------------------------------------------------
+
 -----------------------
--- 1. federal_states --
+-- 2. federal_states --
 -----------------------
 CREATE TABLE federal_states (
     federal_id      CHAR(2),
@@ -41,17 +59,6 @@ CONSTRAINT chk_federal_states_states
             FOREIGN KEY (state_id)
             REFERENCES states(state_id),
 CONSTRAINT chk_federal_id CHECK (UPPER(federal_id) in ('KL', 'LB', 'PJ'))
-);
---------------------------------------------------------------------------------------------------
-
----------------
--- 2. states --
----------------
-CREATE TABLE states (
-    state_id        CHAR(2),
-    name            VARCHAR(50) NOT NULL UNIQUE,
-PRIMARY KEY(state_id),
-CONSTRAINT chk_state_id CHECK (UPPER(state_id) in ('JR', 'KD', 'KT', 'MK', 'NS', 'PH', 'PG', 'PK', 'PS', 'SB', 'SR', 'SG', 'TG', 'WP'))
 );
 --------------------------------------------------------------------------------------------------
 
@@ -416,7 +423,7 @@ DECLARE
     successCount integer;
 BEGIN
     -- Assigning tables names to the array
-    tables := tablesarray('federal_states', 'states', 'locations', 'contacts', 'diseases', 'medical_supply', 'exams', 'donations', 'shelters', 'victims', 'staffs', 'donors');
+    tables := tablesarray('states', 'federal_states', 'locations', 'diseases', 'medical_supply', 'exams', 'shelters', 'staffs', 'victims', 'donors', 'donations', 'contacts');
     total := tables.count;
     successCount := 0;
 
