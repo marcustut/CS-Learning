@@ -20,8 +20,8 @@ ORDER BY D.name, ItemCount;
 -- _Query 3 - *Check Number of COVID Victims more than average from each states where age lesser than 10*_
 SELECT S.state, COUNT(V.victim_id) AS NoOfCOVIDVictims
 FROM Victims V, Shelter_allocations S
-WHERE (SELECT TRUNC((SYSDATE - birthdate)/365.25) AS Age
-       FROM Dual, Victims) < 10
+WHERE V.victim_id = S.victim_id AND (SELECT TRUNC((SYSDATE - birthdate)/365.25) AS Age
+                                     FROM Dual, Victims) < 10
 AND (SELECT COUNT(victim_id)
      FROM victims) > (SELECT AVG(VictimsCount)
                       FROM (SELECT victim_id, COUNT(victim_id) AS VictimsCount
@@ -39,7 +39,13 @@ AND UPPER(I.name) LIKE '%FACEMASK%';
 GROUP BY I.donation_item_id, I.name,
 ORDER BY TotalNumOfDonation DESC; 
 
--- _Query 5 - **_
+-- _Query 5 - *List the number of tasks for each doctors on Labour's Day including their respective hospitals*_
+SELECT S.name, D.fname || ' ' || D.lname AS DoctorName, COUNT(T.task_id) AS NoOfTasks
+FROM Shelters S, Staffs D, Tasks T
+WHERE S.shelter_id = D.shelter_id AND D.task_id = T.task_id
+AND UPPER(D.position) = 'DOCTOR' AND T.date = TO_DATE('01-MAY-2020', 'DD-MON-YYYY')
+GROUP BY S.name, D.fname
+ORDER BY NoOfTasks DESC;
 
 *Esther Wong*
 _Query 1_

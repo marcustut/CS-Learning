@@ -5,7 +5,7 @@ class Registration {
   private Owner owner;
   private Car car;
   private int registrationNum;
-  public static int registrationIndex = 1000;
+  private static int registrationIndex = 1000;
 
   // Constructors
   public Registration(Owner owner, Car car) {
@@ -41,7 +41,10 @@ class Registration {
 
   // Public Methods
   public String toString() {
-    String registrationDetails = String.format("%d       %s      %s %s %s %d %s %s %.1f\n", this.registrationNum, this.owner.getOwnerName(), this.owner.getOwnerIC(), this.car.getCarPlate(), this.car.getColor(), this.car.getYearManufactured(), this.car.getMake().getMake(), this.car.getMake().getModel(), this.car.getMake().getEngineCap());
+    String ownerDetails = this.owner.toString();
+    String carDetails = this.car.toString();
+    String registrationDetails = String.format("%-10d %-31s %s", this.registrationNum, ownerDetails, carDetails);
+    // String registrationDetails = String.format("%d       %s      %s %s %s %d %s %s %.1f\n", this.registrationNum, this.owner.getOwnerName(), this.owner.getOwnerIC(), this.car.getCarPlate(), this.car.getColor(), this.car.getYearManufactured(), this.car.getMake().getMake(), this.car.getMake().getModel(), this.car.getMake().getEngineCap());
     return registrationDetails;
   }
 
@@ -81,19 +84,25 @@ class Owner {
   public void setOwnerName(String ownerName) {
     this.ownerName = ownerName;
   }
+
+  // User Defined Methods
+  public String toString() {
+    String onwerDetails = String.format("%-15s %s", this.ownerName, this.ownerIC);
+    return onwerDetails;
+  }
 }
 
 class Car {
   private int yearManufactured;
   private String color, carPlate;
-  private Make make;
+  private CarType make;
 
   // Constructors
   public Car() {
     this(0, "", "", null);
   }
 
-  public Car(int yearManufactured, String color, String carPlate, Make make) {
+  public Car(int yearManufactured, String color, String carPlate, CarType make) {
     this.yearManufactured = yearManufactured;
     this.color = color;
     this.carPlate = carPlate;
@@ -125,25 +134,32 @@ class Car {
     this.carPlate = carPlate;
   }
 
-  public Make getMake() {
+  public CarType getMake() {
     return this.make;
   }
 
-  public void setMake(Make make) {
+  public void setMake(CarType make) {
     this.make = make;
+  }
+
+  // User Defined Methods
+  public String toString() {
+    String carDetails = String.format("%-12s %-8s %-8d", this.carPlate, this.color, this.yearManufactured);
+    String makeDetails = this.make.toString();
+    return carDetails + makeDetails;
   }
 }
 
-class Make {
+class CarType {
   private String make, model;
   private double engineCap;
 
   // Constructors
-  public Make() {
+  public CarType() {
     this("", "", 0.0);
   }
 
-  public Make(String make, String model, double engineCap) {
+  public CarType(String make, String model, double engineCap) {
     this.make = make;
     this.model = model;
     this.engineCap = engineCap;
@@ -173,6 +189,11 @@ class Make {
   public void setEngineCap(double engineCap) {
     this.engineCap = engineCap;
   }
+
+  public String toString() {
+    String carTypeDetails = String.format("%-9s %-13s %.1f", this.make, this.model, this.engineCap);
+    return carTypeDetails;
+  }
 }
 
 class P4Q5 {
@@ -196,24 +217,21 @@ class P4Q5 {
     } while (numCars <= 0);
 
     Car[] cars = new Car[numCars];
+    CarType[] carTypes = { new CarType("Toyota", "Vios", 1.5),
+                           new CarType("Nissan", "Teana", 2.0),
+                           new CarType("Honda", "City", 1.6) };
     Owner[] owners = new Owner[numCars];
     Registration[] registrations = new Registration[numCars];
 
-    String make, model, color, carPlate, ownerIC, ownerName;
-    int yearManufactured;
-    double engineCap;
+    String color, carPlate, ownerIC, ownerName;
+    int yearManufactured, carNum;
 
     for (int i=0; i<numCars; i++) {
       // Taking input from users
       System.out.printf("-- Car %d\n", i+1);
-      System.out.print("Enter the make of the car: ");
-      make = scanner.nextLine();
-
-      System.out.print("Enter the model of the car: ");
-      model = scanner.nextLine();
-
-      System.out.print("Enter the engine capacity of the car: ");
-      engineCap = Double.parseDouble(scanner.nextLine());
+      System.out.print("Below are the available car types:\n1. Toyota Vios (1.5L)\n2. Nissan Teana (2.0L)\n3. Honda City (1.6L)\n\n");
+      System.out.print("Enter the car you want: ");
+      carNum = Integer.parseInt(scanner.nextLine());
 
       System.out.print("Enter the color of the car: ");
       color = scanner.nextLine();
@@ -231,7 +249,7 @@ class P4Q5 {
       ownerName = scanner.nextLine();
 
       // Creating the car object
-      cars[i] = new Car(yearManufactured, color, carPlate, new Make(make, model, engineCap));
+      cars[i] = new Car(yearManufactured, color, carPlate, carTypes[carNum-1]);
       // Creating the owner object
       owners[i] =  new Owner(ownerIC, ownerName);
       // Creating the registration object
@@ -239,7 +257,7 @@ class P4Q5 {
     }
 
     System.out.printf("\nCar Registration Listing\n");
-    System.out.printf("Reg No.    Name            IC No. Plate No. Color Year Make Model Capacity\n");
+    System.out.printf("Reg No.    Name            IC No.          Plate No.    Color    Year    Make      Model       Capacity\n");
     for (int i=0; i<numCars; i++) {
       System.out.println(registrations[i].toString());
     }
