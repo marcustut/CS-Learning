@@ -113,3 +113,34 @@ Visualizing an association in Java code. An association is usually represented a
 The relationship allows objects to call methods in other objects.
 
 ![Object references](https://i.ibb.co/bPkCJ0S/image.png)
+
+![Another example - Lecturer teach Course](https://i.ibb.co/m0G77Xk/image.png)
+
+Both examples above are **one-directional** association.
+
+![Bidirectional Relationship Example](https://i.ibb.co/KzPBMM2/image.png)
+
+This above example is a representation of **bidirectional**(many-to-many) association.
+
+**Association** - [Example Source Code](https://github.com/marcustut/CS-Learning/tree/master/SoftwareEngineering_TARUC/Y1S3/BACS2023%20Object%20Oriented%20Programming/Teaching%20Materials/Lecture5Example/src/Association)
+
+#### Aggregation
+
+Aggregation is a special type of association that models a **whole-part relationship** between aggregate and its parts.
+
+![Aggregation Example](https://i.ibb.co/yfG73vY/image.png)
+
+For example, the College class is made up of one or more student. In aggregation, the contained classes(Student) are **never totally dependant** on the lifecycle of the container. Here, the college class will remain even if the student is not available.
+
+![Aggregation Example 2](https://i.ibb.co/jVhzTds/image.png)
+
+><u>**Aggregration**</u> is a special form of association, which represents an **ownership**(has-a) relationship between two classes.
+
+>If an object is **exclusively owned** by an aggregated object, the relationship between the object and its aggregated object is referred to as <u>**Composition**</u>.
+
+* **"A student has a name"** is a <u>**Composition**</u> relationship between the *Student* class and the *Name* class.
+* **"A student has an address"** is an <u>**Aggregation**</u> relationship between the *Student* class and the *Address* class, this is because an address may be shared by several students.
+
+![Aggregation in Code](https://i.ibb.co/nfcrNRR/image.png)
+
+this above image show how we implement Aggregation in code.
