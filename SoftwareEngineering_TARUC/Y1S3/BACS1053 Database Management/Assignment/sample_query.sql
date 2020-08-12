@@ -2,18 +2,18 @@
 
 *Kai Yang*
 -- _Query 1 - *Check workload for each doctor*_
-SELECT S.staff_id, S.fname || ' ' || S.lname AS Sname, S.position, COUNT(W.workload_id) AS WorkloadCount
-FROM Staffs S, Workloads W
-WHERE S.staff_id = W.staff_id
-AND UPPER(S.position) = 'DOCTOR'
-GROUP BY S.staff_id
-ORDER BY WorkloadCount;
+SELECT S.staff_id, S.name, S.position, COUNT(W.task_id) AS WorkloadCount 
+FROM Staffs S, Workload W 
+WHERE S.staff_id = W.staff_id 
+AND UPPER(S.position) = 'DOCTOR' 
+GROUP BY S.staff_id, S.name, S.position 
+ORDER BY WorkloadCount DESC;
 
 -- _Query 2 - *Check number of items left for each item category corresponding to diseases less than 50*_
 SELECT D.name, I.name, I.item_id, COUNT(I.quantity) AS ItemCount
 FROM Items I, Diseases D
 WHERE I.item_id = D.item_id
-GROUP BY D.name, I.name,
+GROUP BY D.name, I.name, I.item_id
 HAVING ItemCount < 50
 ORDER BY D.name, ItemCount;
 
