@@ -166,7 +166,7 @@ class CurrentAccount extends Account {
   }
 }
 
-public class P6Q1 {
+public class P6Q1Q2 {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
 
