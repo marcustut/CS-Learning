@@ -1,28 +1,21 @@
 package main
 
 import (
-	"fmt"
-	"io/ioutil"
+  "/home/runner/CS-Learning/Go/learn/mircoservices/handlers"
 	"log"
 	"net/http"
+  "os"
 )
 
 func main() {
-	http.HandleFunc("/", func(rw http.ResponseWriter, r *http.Request) {
-		log.Println("Hello World")
-		d, err := ioutil.ReadAll(r.Body)
+  logObj := log.New(os.Stdout, "product-api", log.LstdFlags)
 
-		if err != nil {
-			http.Error(rw, "Opps", http.StatusBadRequest)
-			return
-		}
+  helloHandler := handlers.NewHello(logObj)
+  goodbyeHandler := handlers.NewGoodbye(logObj)
 
-		fmt.Fprintf(rw, "Hello %s", d)
-	})
+  serveMux := http.NewServeMux()
+  serveMux.Handle("/", helloHandler)
+  serveMux.Handle("/goodbye", goodbyeHandler)
 
-	http.HandleFunc("/goodbye", func(http.ResponseWriter, *http.Request) {
-		log.Println("Good Bye")
-	})
-
-	http.ListenAndServe(":9090", nil)
+  http.ListenAndServe(":9090", serveMux)
 }
